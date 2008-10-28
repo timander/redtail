@@ -1,15 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  date: 2008-10-25
-  event_type: MyString
-  open: false
-  description: MyText
+  name: Italian Lunch
+  date: 2008-10-10
+  event_type: restaurant
+  open: true
+  description: Please come join us for Lasagna and Gelato!
 
 two:
-  name: MyString
-  date: 2008-10-25
-  event_type: MyString
+  name: Hungry Hawk @Home
+  date: 2008-11-11
+  event_type: take_home
   open: false
-  description: MyText
+  description: Hungry Hawk frozen foods available for purchase.

@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  email: MyString
-  password: MyString
-  account_type: MyString
+  email: someone@somewhere.com
+  password: gr33nb3@ns
+  account_type: normal
 
 two:
-  email: MyString
-  password: MyString
-  account_type: MyString
+  email: admin@nowhere.com
+  password: r3dp3pp3r
+  account_type: admin
