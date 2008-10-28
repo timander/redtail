@@ -1,0 +1,396 @@
+  [4;36;1mSQL (0.000249)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2008-10-27 20:19:41) [POST]
+  Session ID: 
+  Parameters: {"account"=>{}, "action"=>"create", "controller"=>"accounts"}
+  [4;35;1mAccount Create (0.000378)[0m   [0mINSERT INTO "accounts" ("updated_at", "type", "password", "email", "created_at") VALUES('2008-10-28 01:19:41', NULL, NULL, NULL, '2008-10-28 01:19:41')[0m
+Redirected to http://test.host/accounts/996332878
+Completed in 0.00612 (163 reqs/sec) | DB: 0.00166 (27%) | 302 Found [http://test.host/accounts?]
+  [4;36;1mSQL (0.000224)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;35;1mSQL (0.000236)[0m   [0mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;36;1mAccount Load (0.000232)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+  [4;35;1mAccount Load (0.000250)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#index (for 0.0.0.0 at 2008-10-27 20:19:41) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000351)[0m   [0;1mSELECT * FROM "accounts" [0m
+
+
+Processing AccountsController#new (for 0.0.0.0 at 2008-10-27 20:19:41) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering template within layouts/accounts
+Rendering accounts/new
+Completed in 0.00398 (250 reqs/sec) | Rendering: 0.00363 (90%) | DB: 0.00129 (32%) | 200 OK [http://test.host/accounts/new]
+  [4;35;1mAccount Load (0.000292)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+  [4;36;1mAccount Load (0.000237)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+  [4;35;1mSQL (0.000197)[0m   [0mSELECT count(*) AS count_all FROM "events" [0m
+
+
+Processing EventsController#create (for 0.0.0.0 at 2008-10-27 20:19:41) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "event"=>{}, "controller"=>"events"}
+  [4;36;1mEvent Create (0.000349)[0m   [0;1mINSERT INTO "events" ("name", "updated_at", "date", "type", "description", "open", "created_at") VALUES(NULL, '2008-10-28 01:19:41', NULL, NULL, NULL, NULL, '2008-10-28 01:19:41')[0m
+Redirected to http://test.host/events/996332878
+Completed in 0.00496 (201 reqs/sec) | DB: 0.00108 (21%) | 302 Found [http://test.host/events?]
+  [4;35;1mSQL (0.000149)[0m   [0mSELECT count(*) AS count_all FROM "events" [0m
+  [4;36;1mSQL (0.000229)[0m   [0;1mSELECT count(*) AS count_all FROM "events" [0m
+  [4;35;1mEvent Load (0.000278)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+  [4;36;1mEvent Load (0.000317)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+
+
+Processing EventsController#index (for 0.0.0.0 at 2008-10-27 20:19:41) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"events"}
+  [4;35;1mEvent Load (0.000414)[0m   [0mSELECT * FROM "events" [0m
+
+
+Processing EventsController#new (for 0.0.0.0 at 2008-10-27 20:19:41) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"events"}
+Rendering template within layouts/events
+Rendering events/new
+Completed in 0.08171 (12 reqs/sec) | Rendering: 0.08132 (99%) | DB: 0.00139 (1%) | 200 OK [http://test.host/events/new]
+  [4;36;1mEvent Load (0.000361)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+  [4;35;1mEvent Load (0.000296)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+  [4;36;1mSQL (0.000260)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2008-10-27 20:34:39) [POST]
+  Session ID: 
+  Parameters: {"account"=>{}, "action"=>"create", "controller"=>"accounts"}
+  [4;35;1mAccount Create (0.000380)[0m   [0mINSERT INTO "accounts" ("updated_at", "type", "password", "email", "created_at") VALUES('2008-10-28 01:34:39', NULL, NULL, NULL, '2008-10-28 01:34:39')[0m
+Redirected to http://test.host/accounts/996332878
+Completed in 0.00631 (158 reqs/sec) | DB: 0.00191 (30%) | 302 Found [http://test.host/accounts?]
+  [4;36;1mSQL (0.000235)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;35;1mSQL (0.000297)[0m   [0mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;36;1mAccount Load (0.000241)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+  [4;35;1mAccount Load (0.000310)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#index (for 0.0.0.0 at 2008-10-27 20:34:39) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000577)[0m   [0;1mSELECT * FROM "accounts" [0m
+
+
+Processing AccountsController#new (for 0.0.0.0 at 2008-10-27 20:34:39) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering template within layouts/accounts
+Rendering accounts/new
+Completed in 0.00413 (241 reqs/sec) | Rendering: 0.00377 (91%) | DB: 0.00166 (40%) | 200 OK [http://test.host/accounts/new]
+  [4;35;1mAccount Load (0.000403)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+  [4;36;1mAccount Load (0.000263)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+  [4;35;1mSQL (0.000221)[0m   [0mSELECT count(*) AS count_all FROM "events" [0m
+
+
+Processing EventsController#create (for 0.0.0.0 at 2008-10-27 20:34:39) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "event"=>{}, "controller"=>"events"}
+  [4;36;1mEvent Create (0.000366)[0m   [0;1mINSERT INTO "events" ("name", "updated_at", "date", "type", "description", "open", "created_at") VALUES(NULL, '2008-10-28 01:34:39', NULL, NULL, NULL, NULL, '2008-10-28 01:34:39')[0m
+Redirected to http://test.host/events/996332878
+Completed in 0.00523 (191 reqs/sec) | DB: 0.00125 (23%) | 302 Found [http://test.host/events?]
+  [4;35;1mSQL (0.000157)[0m   [0mSELECT count(*) AS count_all FROM "events" [0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mSELECT count(*) AS count_all FROM "events" [0m
+  [4;35;1mEvent Load (0.000370)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+  [4;36;1mEvent Load (0.000372)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+
+
+Processing EventsController#index (for 0.0.0.0 at 2008-10-27 20:34:39) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"events"}
+  [4;35;1mEvent Load (0.000501)[0m   [0mSELECT * FROM "events" [0m
+
+
+Processing EventsController#new (for 0.0.0.0 at 2008-10-27 20:34:39) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"events"}
+Rendering template within layouts/events
+Rendering events/new
+Completed in 0.03817 (26 reqs/sec) | Rendering: 0.03777 (98%) | DB: 0.00162 (4%) | 200 OK [http://test.host/events/new]
+  [4;36;1mEvent Load (0.000373)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+  [4;35;1mEvent Load (0.000294)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+  [4;36;1mSQL (0.000268)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2008-10-27 20:38:29) [POST]
+  Session ID: 
+  Parameters: {"account"=>{}, "action"=>"create", "controller"=>"accounts"}
+  [4;35;1mAccount Create (0.000360)[0m   [0mINSERT INTO "accounts" ("updated_at", "account_type", "password", "email", "created_at") VALUES('2008-10-28 01:38:29', NULL, NULL, NULL, '2008-10-28 01:38:29')[0m
+Redirected to http://test.host/accounts/996332878
+Completed in 0.00608 (164 reqs/sec) | DB: 0.00178 (29%) | 302 Found [http://test.host/accounts?]
+  [4;36;1mSQL (0.000250)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;35;1mSQL (0.000284)[0m   [0mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;36;1mAccount Load (0.000209)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#destroy (for 0.0.0.0 at 2008-10-27 20:38:29) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"accounts"}
+  [4;35;1mAccount Load (0.000382)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+  [4;36;1mAccount Destroy (0.000352)[0m   [0;1m DELETE FROM "accounts"
+ WHERE "id" = 953125641
+[0m
+Redirected to http://test.host/accounts
+Completed in 0.00200 (500 reqs/sec) | DB: 0.00148 (73%) | 302 Found [http://test.host/accounts/953125641]
+  [4;35;1mSQL (0.000173)[0m   [0mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;36;1mAccount Load (0.000414)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#edit (for 0.0.0.0 at 2008-10-27 20:38:29) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"accounts"}
+  [4;35;1mAccount Load (0.000280)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+Rendering template within layouts/accounts
+Rendering accounts/edit
+Completed in 0.00503 (198 reqs/sec) | Rendering: 0.00434 (86%) | DB: 0.00087 (17%) | 200 OK [http://test.host/accounts/953125641/edit]
+
+
+Processing AccountsController#index (for 0.0.0.0 at 2008-10-27 20:38:29) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000394)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 0.00381 (262 reqs/sec) | Rendering: 0.00274 (71%) | DB: 0.00039 (10%) | 200 OK [http://test.host/accounts]
+
+
+Processing AccountsController#new (for 0.0.0.0 at 2008-10-27 20:38:29) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering template within layouts/accounts
+Rendering accounts/new
+Completed in 0.00327 (305 reqs/sec) | Rendering: 0.00289 (88%) | DB: 0.00000 (0%) | 200 OK [http://test.host/accounts/new]
+  [4;35;1mAccount Load (0.000315)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#show (for 0.0.0.0 at 2008-10-27 20:38:29) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000255)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+Rendering template within layouts/accounts
+Rendering accounts/show
+Completed in 0.00231 (433 reqs/sec) | Rendering: 0.00146 (63%) | DB: 0.00057 (24%) | 200 OK [http://test.host/accounts/953125641]
+  [4;35;1mAccount Load (0.000266)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#update (for 0.0.0.0 at 2008-10-27 20:38:29) [PUT]
+  Session ID: 
+  Parameters: {"account"=>{}, "action"=>"update", "id"=>"953125641", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000395)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+Redirected to http://test.host/accounts/953125641
+Completed in 0.00232 (431 reqs/sec) | DB: 0.00066 (28%) | 302 Found [http://test.host/accounts/953125641?]
+  [4;35;1mSQL (0.000304)[0m   [0mSELECT count(*) AS count_all FROM "events" [0m
+
+
+Processing EventsController#create (for 0.0.0.0 at 2008-10-27 20:38:29) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "event"=>{}, "controller"=>"events"}
+  [4;36;1mEvent Create (0.000390)[0m   [0;1mINSERT INTO "events" ("name", "updated_at", "date", "description", "event_type", "open", "created_at") VALUES(NULL, '2008-10-28 01:38:29', NULL, NULL, NULL, NULL, '2008-10-28 01:38:29')[0m
+Redirected to http://test.host/events/996332878
+Completed in 0.00531 (188 reqs/sec) | DB: 0.00069 (13%) | 302 Found [http://test.host/events?]
+  [4;35;1mSQL (0.000153)[0m   [0mSELECT count(*) AS count_all FROM "events" [0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mSELECT count(*) AS count_all FROM "events" [0m
+  [4;35;1mEvent Load (0.000271)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+
+
+Processing EventsController#destroy (for 0.0.0.0 at 2008-10-27 20:38:29) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"events"}
+  [4;36;1mEvent Load (0.000269)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+  [4;35;1mEvent Destroy (0.000218)[0m   [0m DELETE FROM "events"
+ WHERE "id" = 953125641
+[0m
+Redirected to http://test.host/events
+Completed in 0.00137 (728 reqs/sec) | DB: 0.00112 (81%) | 302 Found [http://test.host/events/953125641]
+  [4;36;1mSQL (0.000136)[0m   [0;1mSELECT count(*) AS count_all FROM "events" [0m
+  [4;35;1mEvent Load (0.000508)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+
+
+Processing EventsController#edit (for 0.0.0.0 at 2008-10-27 20:38:29) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"events"}
+  [4;36;1mEvent Load (0.000301)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+Rendering template within layouts/events
+Rendering events/edit
+Completed in 0.08044 (12 reqs/sec) | Rendering: 0.07970 (99%) | DB: 0.00095 (1%) | 200 OK [http://test.host/events/953125641/edit]
+
+
+Processing EventsController#index (for 0.0.0.0 at 2008-10-27 20:38:29) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"events"}
+  [4;35;1mEvent Load (0.000461)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/events
+Rendering events/index
+Completed in 0.00456 (219 reqs/sec) | Rendering: 0.00345 (75%) | DB: 0.00046 (10%) | 200 OK [http://test.host/events]
+
+
+Processing EventsController#new (for 0.0.0.0 at 2008-10-27 20:38:29) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"events"}
+Rendering template within layouts/events
+Rendering events/new
+Completed in 0.03528 (28 reqs/sec) | Rendering: 0.03479 (98%) | DB: 0.00000 (0%) | 200 OK [http://test.host/events/new]
+  [4;36;1mEvent Load (0.000454)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+
+
+Processing EventsController#show (for 0.0.0.0 at 2008-10-27 20:38:29) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"events"}
+  [4;35;1mEvent Load (0.000303)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+Rendering template within layouts/events
+Rendering events/show
+Completed in 0.00325 (307 reqs/sec) | Rendering: 0.00230 (70%) | DB: 0.00076 (23%) | 200 OK [http://test.host/events/953125641]
+  [4;36;1mEvent Load (0.000331)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+
+
+Processing EventsController#update (for 0.0.0.0 at 2008-10-27 20:38:29) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "event"=>{}, "id"=>"953125641", "controller"=>"events"}
+  [4;35;1mEvent Load (0.000418)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+Redirected to http://test.host/events/953125641
+Completed in 0.00216 (463 reqs/sec) | DB: 0.00075 (34%) | 302 Found [http://test.host/events/953125641?]
+  [4;36;1mSQL (0.000278)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2008-10-27 20:38:47) [POST]
+  Session ID: 
+  Parameters: {"account"=>{}, "action"=>"create", "controller"=>"accounts"}
+  [4;35;1mAccount Create (0.000392)[0m   [0mINSERT INTO "accounts" ("updated_at", "account_type", "password", "email", "created_at") VALUES('2008-10-28 01:38:47', NULL, NULL, NULL, '2008-10-28 01:38:47')[0m
+Redirected to http://test.host/accounts/996332878
+Completed in 0.00641 (155 reqs/sec) | DB: 0.00194 (30%) | 302 Found [http://test.host/accounts?]
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;35;1mSQL (0.000298)[0m   [0mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;36;1mAccount Load (0.000267)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#destroy (for 0.0.0.0 at 2008-10-27 20:38:47) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"accounts"}
+  [4;35;1mAccount Load (0.000293)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+  [4;36;1mAccount Destroy (0.000251)[0m   [0;1m DELETE FROM "accounts"
+ WHERE "id" = 953125641
+[0m
+Redirected to http://test.host/accounts
+Completed in 0.00156 (641 reqs/sec) | DB: 0.00129 (82%) | 302 Found [http://test.host/accounts/953125641]
+  [4;35;1mSQL (0.000217)[0m   [0mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;36;1mAccount Load (0.000459)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#edit (for 0.0.0.0 at 2008-10-27 20:38:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"accounts"}
+  [4;35;1mAccount Load (0.000274)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+Rendering template within layouts/accounts
+Rendering accounts/edit
+Completed in 0.00500 (200 reqs/sec) | Rendering: 0.00430 (86%) | DB: 0.00095 (19%) | 200 OK [http://test.host/accounts/953125641/edit]
+
+
+Processing AccountsController#index (for 0.0.0.0 at 2008-10-27 20:38:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000429)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 0.00362 (276 reqs/sec) | Rendering: 0.00254 (70%) | DB: 0.00043 (11%) | 200 OK [http://test.host/accounts]
+
+
+Processing AccountsController#new (for 0.0.0.0 at 2008-10-27 20:38:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering template within layouts/accounts
+Rendering accounts/new
+Completed in 0.00324 (308 reqs/sec) | Rendering: 0.00286 (88%) | DB: 0.00000 (0%) | 200 OK [http://test.host/accounts/new]
+  [4;35;1mAccount Load (0.000359)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#show (for 0.0.0.0 at 2008-10-27 20:38:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000258)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+Rendering template within layouts/accounts
+Rendering accounts/show
+Completed in 0.00240 (417 reqs/sec) | Rendering: 0.00155 (64%) | DB: 0.00062 (25%) | 200 OK [http://test.host/accounts/953125641]
+  [4;35;1mAccount Load (0.000296)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#update (for 0.0.0.0 at 2008-10-27 20:38:47) [PUT]
+  Session ID: 
+  Parameters: {"account"=>{}, "action"=>"update", "id"=>"953125641", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000260)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+Redirected to http://test.host/accounts/953125641
+Completed in 0.00178 (561 reqs/sec) | DB: 0.00056 (31%) | 302 Found [http://test.host/accounts/953125641?]
+  [4;35;1mSQL (0.000369)[0m   [0mSELECT count(*) AS count_all FROM "events" [0m
+
+
+Processing EventsController#create (for 0.0.0.0 at 2008-10-27 20:38:47) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "event"=>{}, "controller"=>"events"}
+  [4;36;1mEvent Create (0.000470)[0m   [0;1mINSERT INTO "events" ("name", "updated_at", "date", "description", "event_type", "open", "created_at") VALUES(NULL, '2008-10-28 01:38:47', NULL, NULL, NULL, NULL, '2008-10-28 01:38:47')[0m
+Redirected to http://test.host/events/996332878
+Completed in 0.00666 (150 reqs/sec) | DB: 0.00084 (12%) | 302 Found [http://test.host/events?]
+  [4;35;1mSQL (0.000207)[0m   [0mSELECT count(*) AS count_all FROM "events" [0m
+  [4;36;1mSQL (0.000314)[0m   [0;1mSELECT count(*) AS count_all FROM "events" [0m
+  [4;35;1mEvent Load (0.000343)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+
+
+Processing EventsController#destroy (for 0.0.0.0 at 2008-10-27 20:38:47) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"events"}
+  [4;36;1mEvent Load (0.000298)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+  [4;35;1mEvent Destroy (0.000255)[0m   [0m DELETE FROM "events"
+ WHERE "id" = 953125641
+[0m
+Redirected to http://test.host/events
+Completed in 0.00155 (644 reqs/sec) | DB: 0.00142 (91%) | 302 Found [http://test.host/events/953125641]
+  [4;36;1mSQL (0.000151)[0m   [0;1mSELECT count(*) AS count_all FROM "events" [0m
+  [4;35;1mEvent Load (0.000440)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+
+
+Processing EventsController#edit (for 0.0.0.0 at 2008-10-27 20:38:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"events"}
+  [4;36;1mEvent Load (0.000320)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+Rendering template within layouts/events
+Rendering events/edit
+Completed in 0.00812 (123 reqs/sec) | Rendering: 0.00733 (90%) | DB: 0.00091 (11%) | 200 OK [http://test.host/events/953125641/edit]
+
+
+Processing EventsController#index (for 0.0.0.0 at 2008-10-27 20:38:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"events"}
+  [4;35;1mEvent Load (0.000422)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/events
+Rendering events/index
+Completed in 0.00480 (208 reqs/sec) | Rendering: 0.00376 (78%) | DB: 0.00042 (8%) | 200 OK [http://test.host/events]
+
+
+Processing EventsController#new (for 0.0.0.0 at 2008-10-27 20:38:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"events"}
+Rendering template within layouts/events
+Rendering events/new
+Completed in 0.03529 (28 reqs/sec) | Rendering: 0.03479 (98%) | DB: 0.00000 (0%) | 200 OK [http://test.host/events/new]
+  [4;36;1mEvent Load (0.000372)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+
+
+Processing EventsController#show (for 0.0.0.0 at 2008-10-27 20:38:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"events"}
+  [4;35;1mEvent Load (0.000360)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+Rendering template within layouts/events
+Rendering events/show
+Completed in 0.00328 (305 reqs/sec) | Rendering: 0.00220 (67%) | DB: 0.00073 (22%) | 200 OK [http://test.host/events/953125641]
+  [4;36;1mEvent Load (0.000304)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+
+
+Processing EventsController#update (for 0.0.0.0 at 2008-10-27 20:38:47) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "event"=>{}, "id"=>"953125641", "controller"=>"events"}
+  [4;35;1mEvent Load (0.000250)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 953125641) [0m
+Redirected to http://test.host/events/953125641
+Completed in 0.00183 (547 reqs/sec) | DB: 0.00055 (30%) | 302 Found [http://test.host/events/953125641?]

@@ -3,13 +3,13 @@
 one:
   name: MyString
   date: 2008-10-25
-  type: MyString
+  event_type: MyString
   open: false
   description: MyText
 
 two:
   name: MyString
   date: 2008-10-25
-  type: MyString
+  event_type: MyString
   open: false
   description: MyText

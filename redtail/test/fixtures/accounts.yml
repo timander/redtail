@@ -3,9 +3,9 @@
 one:
   email: MyString
   password: MyString
-  type: MyString
+  account_type: MyString
 
 two:
   email: MyString
   password: MyString
-  type: MyString
+  account_type: MyString

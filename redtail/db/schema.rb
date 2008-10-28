@@ -9,12 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081025143223) do
+ActiveRecord::Schema.define(:version => 20081025144602) do
+
+  create_table "accounts", :force => true do |t|
+    t.string   "email"
+    t.string   "password"
+    t.string   "account_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", :force => true do |t|
     t.string   "name"
     t.date     "date"
-    t.string   "type"
+    t.string   "event_type"
     t.boolean  "open"
     t.text     "description"
     t.datetime "created_at"
