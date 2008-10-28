@@ -1,0 +1,21 @@
+<% form_tag :action => 'do_login' do %>
+  <table class="loginForm" align="center">
+    <tbody>
+      <tr>
+        <td>Login</td>
+        <td><input name="username" type="text" /></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input name="password" type="password" /></td>
+      </tr>
+      <tr>
+      <td></td> 
+      <td><%= flash_helper %></td> 
+	  </tr>
+      <tr>
+        <td colspan="2"><%= submit_tag "Login" %></td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>

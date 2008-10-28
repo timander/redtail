@@ -1,0 +1,18 @@
+<p>
+  <b>Email:</b>
+  <%=h @account.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @account.password %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @account.type %>
+</p>
+
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
