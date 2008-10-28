@@ -1,2 +1,0 @@
-module TakeHomeHelper
-end

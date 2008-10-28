@@ -3,9 +3,9 @@
 one:
   email: someone@somewhere.com
   password: gr33nb3@ns
-  account_type: normal
+  privilege: normal
 
 two:
   email: admin@nowhere.com
   password: r3dp3pp3r
-  account_type: admin
+  privilege: admin
