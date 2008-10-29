@@ -954,3 +954,143 @@ Processing RestaurantsController#update (for 0.0.0.0 at 2008-10-28 08:28:36) [PU
   [4;35;1mRestaurant Load (0.000287)[0m   [0mSELECT * FROM "restaurants" WHERE ("restaurants"."id" = 953125641) [0m
 Redirected to http://test.host/restaurants/953125641
 Completed in 0.00172 (580 reqs/sec) | DB: 0.00066 (38%) | 302 Found [http://test.host/restaurants/953125641?]
+  [4;36;1mSQL (0.000313)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" [0m
+
+
+Processing AccountsController#create (for 0.0.0.0 at 2008-10-28 19:31:55) [POST]
+  Session ID: 
+  Parameters: {"account"=>{}, "action"=>"create", "controller"=>"accounts"}
+  [4;35;1mAccount Create (0.000396)[0m   [0mINSERT INTO "accounts" ("updated_at", "password", "email", "privilege", "created_at") VALUES('2008-10-29 00:31:55', NULL, NULL, NULL, '2008-10-29 00:31:55')[0m
+Redirected to http://test.host/accounts/996332878
+Completed in 0.00631 (158 reqs/sec) | DB: 0.00176 (27%) | 302 Found [http://test.host/accounts?]
+  [4;36;1mSQL (0.000184)[0m   [0;1mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;35;1mSQL (0.000391)[0m   [0mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;36;1mAccount Load (0.000279)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#destroy (for 0.0.0.0 at 2008-10-28 19:31:55) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"accounts"}
+  [4;35;1mAccount Load (0.000294)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+  [4;36;1mAccount Destroy (0.000253)[0m   [0;1m DELETE FROM "accounts"
+ WHERE "id" = 953125641
+[0m
+Redirected to http://test.host/accounts
+Completed in 0.00151 (660 reqs/sec) | DB: 0.00140 (92%) | 302 Found [http://test.host/accounts/953125641]
+  [4;35;1mSQL (0.000226)[0m   [0mSELECT count(*) AS count_all FROM "accounts" [0m
+  [4;36;1mAccount Load (0.000483)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#edit (for 0.0.0.0 at 2008-10-28 19:31:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"accounts"}
+  [4;35;1mAccount Load (0.000269)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+Rendering template within layouts/accounts
+Rendering accounts/edit
+Completed in 0.00612 (163 reqs/sec) | Rendering: 0.00541 (88%) | DB: 0.00098 (15%) | 200 OK [http://test.host/accounts/953125641/edit]
+
+
+Processing AccountsController#index (for 0.0.0.0 at 2008-10-28 19:31:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000463)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 0.00413 (242 reqs/sec) | Rendering: 0.00295 (71%) | DB: 0.00046 (11%) | 200 OK [http://test.host/accounts]
+
+
+Processing AccountsController#new (for 0.0.0.0 at 2008-10-28 19:31:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering template within layouts/accounts
+Rendering accounts/new
+Completed in 0.00359 (278 reqs/sec) | Rendering: 0.00320 (89%) | DB: 0.00000 (0%) | 200 OK [http://test.host/accounts/new]
+  [4;35;1mAccount Load (0.000317)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#show (for 0.0.0.0 at 2008-10-28 19:31:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000305)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+Rendering template within layouts/accounts
+Rendering accounts/show
+Completed in 0.00282 (354 reqs/sec) | Rendering: 0.00187 (66%) | DB: 0.00062 (22%) | 200 OK [http://test.host/accounts/953125641]
+  [4;35;1mAccount Load (0.000378)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+
+
+Processing AccountsController#update (for 0.0.0.0 at 2008-10-28 19:31:55) [PUT]
+  Session ID: 
+  Parameters: {"account"=>{}, "action"=>"update", "id"=>"953125641", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.000332)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 953125641) [0m
+Redirected to http://test.host/accounts/953125641
+Completed in 0.00195 (512 reqs/sec) | DB: 0.00071 (36%) | 302 Found [http://test.host/accounts/953125641?]
+  [4;35;1mSQL (0.000310)[0m   [0mSELECT count(*) AS count_all FROM "restaurants" [0m
+
+
+Processing RestaurantsController#create (for 0.0.0.0 at 2008-10-28 19:31:55) [POST]
+  Session ID: 
+  Parameters: {"restaurant"=>{}, "action"=>"create", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Create (0.000357)[0m   [0;1mINSERT INTO "restaurants" ("name", "updated_at", "price", "date", "description", "open", "created_at") VALUES(NULL, '2008-10-29 00:31:55', NULL, NULL, NULL, NULL, '2008-10-29 00:31:55')[0m
+Redirected to http://test.host/restaurants/996332878
+Completed in 0.00635 (157 reqs/sec) | DB: 0.00067 (10%) | 302 Found [http://test.host/restaurants?]
+  [4;35;1mSQL (0.000171)[0m   [0mSELECT count(*) AS count_all FROM "restaurants" [0m
+  [4;36;1mSQL (0.000288)[0m   [0;1mSELECT count(*) AS count_all FROM "restaurants" [0m
+  [4;35;1mRestaurant Load (0.000322)[0m   [0mSELECT * FROM "restaurants" WHERE ("restaurants"."id" = 953125641) [0m
+
+
+Processing RestaurantsController#destroy (for 0.0.0.0 at 2008-10-28 19:31:55) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Load (0.000289)[0m   [0;1mSELECT * FROM "restaurants" WHERE ("restaurants"."id" = 953125641) [0m
+  [4;35;1mRestaurant Destroy (0.000233)[0m   [0m DELETE FROM "restaurants"
+ WHERE "id" = 953125641
+[0m
+Redirected to http://test.host/restaurants
+Completed in 0.00148 (676 reqs/sec) | DB: 0.00130 (88%) | 302 Found [http://test.host/restaurants/953125641]
+  [4;36;1mSQL (0.000150)[0m   [0;1mSELECT count(*) AS count_all FROM "restaurants" [0m
+  [4;35;1mRestaurant Load (0.000407)[0m   [0mSELECT * FROM "restaurants" WHERE ("restaurants"."id" = 953125641) [0m
+
+
+Processing RestaurantsController#edit (for 0.0.0.0 at 2008-10-28 19:31:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Load (0.000296)[0m   [0;1mSELECT * FROM "restaurants" WHERE ("restaurants"."id" = 953125641) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/edit
+Completed in 0.02345 (42 reqs/sec) | Rendering: 0.02272 (96%) | DB: 0.00085 (3%) | 200 OK [http://test.host/restaurants/953125641/edit]
+
+
+Processing RestaurantsController#index (for 0.0.0.0 at 2008-10-28 19:31:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000450)[0m   [0mSELECT * FROM "restaurants" [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+Completed in 0.00418 (239 reqs/sec) | Rendering: 0.00307 (73%) | DB: 0.00045 (10%) | 200 OK [http://test.host/restaurants]
+
+
+Processing RestaurantsController#new (for 0.0.0.0 at 2008-10-28 19:31:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"restaurants"}
+Rendering template within layouts/restaurants
+Rendering restaurants/new
+Completed in 0.08039 (12 reqs/sec) | Rendering: 0.08000 (99%) | DB: 0.00000 (0%) | 200 OK [http://test.host/restaurants/new]
+  [4;36;1mRestaurant Load (0.000338)[0m   [0;1mSELECT * FROM "restaurants" WHERE ("restaurants"."id" = 953125641) [0m
+
+
+Processing RestaurantsController#show (for 0.0.0.0 at 2008-10-28 19:31:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000268)[0m   [0mSELECT * FROM "restaurants" WHERE ("restaurants"."id" = 953125641) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/show
+Completed in 0.00351 (284 reqs/sec) | Rendering: 0.00267 (76%) | DB: 0.00061 (17%) | 200 OK [http://test.host/restaurants/953125641]
+  [4;36;1mRestaurant Load (0.000351)[0m   [0;1mSELECT * FROM "restaurants" WHERE ("restaurants"."id" = 953125641) [0m
+
+
+Processing RestaurantsController#update (for 0.0.0.0 at 2008-10-28 19:31:55) [PUT]
+  Session ID: 
+  Parameters: {"restaurant"=>{}, "action"=>"update", "id"=>"953125641", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000297)[0m   [0mSELECT * FROM "restaurants" WHERE ("restaurants"."id" = 953125641) [0m
+Redirected to http://test.host/restaurants/953125641
+Completed in 0.00173 (579 reqs/sec) | DB: 0.00065 (37%) | 302 Found [http://test.host/restaurants/953125641?]

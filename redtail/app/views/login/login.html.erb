@@ -1,20 +1,17 @@
-<% form_tag :action => 'do_login' do %>
+<% form_for :account, @account, :action => "login" do |f| %>
+  <%= error_messages_for :account %>
   <table class="loginForm" align="center">
     <tbody>
       <tr>
-        <td>Login</td>
-        <td><input name="username" type="text" /></td>
+		<td><%= f.label :email %></td>
+		<td><%= f.text_field :email %></td>
       </tr>
       <tr>
-        <td>Password</td>
-        <td><input name="password" type="password" /></td>
+		<td><%= f.label :password %></td>
+		<td><%= f.password_field :password %></td>
       </tr>
       <tr>
-      <td></td> 
-      <td><%= flash_helper %></td> 
-	  </tr>
-      <tr>
-        <td colspan="2"><%= submit_tag "Login" %></td>
+        <td colspan="2"><%= f.submit "Login" %></td>
       </tr>
     </tbody>
   </table>
