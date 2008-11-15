@@ -1,0 +1,10 @@
+<%= '<font color="red">'+@auth_error+'</font><hr />' if @auth_error %>
+<% form_tag(:action => 'login') do %>
+  Login:
+  <%= text_field_tag :login, params[:login] %>
+  <br /><br />
+  Password:
+  <%= password_field_tag :password, params[:password] %>
+  <br /><br />
+  <%= submit_tag "log in" %>
+<% end %>
