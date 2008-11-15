@@ -1,0 +1,26 @@
+make localhost:3000 redirect to login
+allow account sign up
+once logged in, show customer info
+
+
+/restaurant
+allow user to make reservation
+	require choices
+		eat in/take out
+		which lunch period
+		drink choice
+		salad dressing choice
+		other choices?
+
+/admin/restaurant
+allow admin user to create restaurant events
+	show time, date, menu, and specify choices
+
+
+regular user:
+	register
+	make reservation for a restaurant
+
+admin user:
+	create restaurant events
+	
