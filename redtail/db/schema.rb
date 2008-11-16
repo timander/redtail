@@ -11,14 +11,6 @@
 
 ActiveRecord::Schema.define(:version => 20081115033257) do
 
-  create_table "accounts", :force => true do |t|
-    t.string   "email"
-    t.string   "password"
-    t.string   "privilege"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "restaurants", :force => true do |t|
     t.string   "name"
     t.date     "date"
@@ -31,8 +23,9 @@ ActiveRecord::Schema.define(:version => 20081115033257) do
 
   create_table "users", :force => true do |t|
     t.string   "username"
-    t.string   "password"
+    t.string   "hashed_password", :limit => 40
     t.string   "email"
+    t.boolean  "email_confirmed",               :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
