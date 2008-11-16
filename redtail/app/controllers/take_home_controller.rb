@@ -1,2 +1,0 @@
-class TakeHomeController < ApplicationController
-end
