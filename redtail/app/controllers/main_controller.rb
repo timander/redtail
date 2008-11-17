@@ -3,12 +3,10 @@ require "digest/sha1"
 class MainController < ApplicationController
  
   # the root index action for our application
-  def index
-  end
 
   def login
     if request.post?
-      puts 'got in login post'
+      redirect_to(:controller => 'reservation', :action => 'index')
     else
       puts 'got in login get'
     end
@@ -24,7 +22,7 @@ class MainController < ApplicationController
 
       if @user.save
         flash[:notice] = "Thank you for registering! We have sent a confirmation email to #{@user.email} with instructions on how to validate your account."
-        redirect_to(:action => "index")
+        redirect_to(:action => "login")
       end
     end
  
