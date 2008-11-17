@@ -4,10 +4,16 @@ class MainController < ApplicationController
  
   # the root index action for our application
   def index
-    puts 'got here'
-    redirect_to(:controller => "restaurant", :action => 'index')
   end
- 
+
+  def login
+    if request.post?
+      puts 'got in login post'
+    else
+      puts 'got in login get'
+    end
+  end
+  
   # allows guests to create a new User
   def register
 
