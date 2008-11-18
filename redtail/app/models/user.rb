@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
 
   attr_accessor :password, :confirm_password
  
+    def password_is?(pw)
+      hashed_password == Digest::SHA1.hexdigest(pw)
+    end
+ 
   # callback hooks
  
     # clean up email and username before validation
