@@ -62,7 +62,7 @@ class MainController < ApplicationController
 
   # create a hash to use when confirming User email addresses
   def confirmation_hash(string)
-    Digest::SHA1.hexdigest(string + "secret word")
+    Digest::SHA1.hexdigest(string + "shark")
   end
  
 end

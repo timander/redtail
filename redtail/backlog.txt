@@ -1,6 +1,10 @@
 make localhost:3000 redirect to login
 allow account sign up
 once logged in, show customer info
+lock out other pages when not logged in
+get email confirmation to work (or strip it out)
+get rid of username? use email to login?
+
 
 
 /restaurant
@@ -19,8 +23,12 @@ allow admin user to create restaurant events
 
 regular user:
 	register
-	make reservation for a restaurant
+	make reservation for a restaurant (receive email confirmation)
+	place order for take home (receive email confirmation)
 
 admin user:
 	create restaurant events
+	create take home order events
+	print grocery list for an event
+	
 	
