@@ -1,6 +1,9 @@
 require "digest/sha1"
  
 class User < ActiveRecord::Base
+  
+  has_many :reservations
+  
   validates_presence_of :username, :email
   validates_uniqueness_of :username
   validates_length_of :username, :minimum => 4

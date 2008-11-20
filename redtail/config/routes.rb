@@ -5,6 +5,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'register', :controller => "main", :action => "register"
   map.connect 'reservation', :controller => "reservation", :action => "index"
   map.connect 'confirm_email/:hash', :controller => "main", :action => "confirm_email"
+  
+  map.resources :reservations
 
   # The priority is based upon order of creation: first created -> highest priority.
 

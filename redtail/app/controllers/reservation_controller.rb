@@ -5,5 +5,17 @@ class ReservationController < ApplicationController
     else
       redirect_to :controller => 'main', :action => 'login'
     end
-  end  
+  end
+  
+  # GET /reservations/new
+  # GET /reservations/new.xml
+  def new
+    @reservation = Reservation.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @reservation }
+    end
+  end
+
 end

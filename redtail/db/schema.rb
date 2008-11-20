@@ -9,7 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081115033257) do
+ActiveRecord::Schema.define(:version => 20081120045852) do
+
+  create_table "reservations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "restaurant_id"
+    t.string   "lunch_period"
+    t.string   "take_out"
+    t.string   "drink"
+    t.string   "dressing"
+    t.string   "special_request"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "restaurants", :force => true do |t|
     t.string   "name"
