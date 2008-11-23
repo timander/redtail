@@ -1,6 +1,7 @@
 require "digest/sha1"
  
 class MainController < ApplicationController
+  skip_filter :user_is_authenticated?
  
   # the root index action for our application
 
@@ -10,7 +11,11 @@ class MainController < ApplicationController
       
       if @user and @user.password_is? params[:password]
         session[:uid] = @user.id
-        redirect_to :controller => 'reservation', :action => 'index'
+        if flash[:requested_url]
+          redirect_to flash[:requested_url]
+        else
+          redirect_to :controller => 'reservation', :action => 'index'
+        end
       else
         @auth_error = "Invalid login/password"
       end
@@ -19,10 +24,14 @@ class MainController < ApplicationController
     end
   end
   
+  def logout
+    session[:uid] = nil
+    render :text => "you are logged out"
+  end
+  
   # allows guests to create a new User
   # allows guests to create a new User
   def register
- 
     if request.get?
       @user = User.new
     else

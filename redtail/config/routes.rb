@@ -1,13 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
-
-  map.connect '', :controller => "main", :action => "index"
-  map.connect 'login', :controller => "main", :action => "login"
-  map.connect 'register', :controller => "main", :action => "register"
-  map.connect 'reservation', :controller => "reservation", :action => "index"
-  map.connect 'confirm_email/:hash', :controller => "main", :action => "confirm_email"
   
-  map.resources :reservations
+  map.root :controller => "main"
 
+  # /reservations
+  map.reservations "reservations/:action", :controller => "reservation"
+  map.connect 'confirm_email/:hash', :controller => "main", :action => "confirm_email"
+  map.logout 'logout', :controller => "main", :action => "logout"
+  map.login 'login', :controller => "main", :action => "login"
+  map.register 'register', :controller => 'main', :action => 'register'
+  # 
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

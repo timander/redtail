@@ -16,5 +16,20 @@ class ApplicationController < ActionController::Base
 
   # Pick a unique cookie name to distinguish our session data from others'
   session :session_key => '_hungryhawk_session_id'
+
+  before_filter :user_is_authenticated?
+  
+  private
+  
+  def user_is_authenticated?
+    unless (session[:uid])
+      flash[:requested_url] = params
+      redirect_to login_url
+    end
+  end
+  
+  def session_user
+    @user ||= User.find_by_id(session[:uid])
+  end
   
 end
