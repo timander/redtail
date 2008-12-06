@@ -1,7 +1,7 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-# one:
-#   column: value
-#
-# two:
-#   column: value
+ron:
+  username: ron
+  hashed_password: 5eb942810a75ebc850972a89285d570d484c89c4 # my_password
+  email: ron@ron.com
+  email_confirmed: true
+  created_at: <%= 3.days.ago.strftime("YYYY-MM-DD") %>
+  updated_at: <%= 3.days.ago.strftime("YYYY-MM-DD") %>
