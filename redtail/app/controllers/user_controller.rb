@@ -39,7 +39,7 @@ class UserController < ApplicationController
         MailRobot::deliver_confirmation_email(@user, confirmation_hash(@user.username))
 
         flash[:notice] = "Thank you for registering! We have sent a confirmation email to #{@user.email} with instructions on how to validate your account."
-        redirect_to(:action => "index")
+        redirect_to root_url
       end
     end
  
@@ -59,7 +59,7 @@ class UserController < ApplicationController
         break
       end
     end
-    redirect_to(:action => "index")
+    redirect_to root_url
  
   end
  

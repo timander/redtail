@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.root :controller => "user"
+  map.root :controller => "welcome"
 
   # /reservations
   map.reservations "reservations/:action", :controller => "reservation"
