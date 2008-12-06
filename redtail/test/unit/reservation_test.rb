@@ -1,8 +1,13 @@
 require 'test_helper'
 
 class ReservationTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+  def test_logout
+    @request.session[:uid] = "something"
+
+    get :logout
+
+    assert_response :success
+    assert_nil @request.session[:uid]
+    assert_equal "you are logged out", @response.body
   end
 end
