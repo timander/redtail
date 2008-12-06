@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "welcome"
 
   # /reservations
-  map.reservations "reservations/:action", :controller => "reservations"
+  map.resources :reservations
   map.connect 'confirm_email/:hash', :controller => "user", :action => "confirm_email"
   map.logout 'logout', :controller => "user", :action => "logout"
   map.login 'login', :controller => "user", :action => "login"

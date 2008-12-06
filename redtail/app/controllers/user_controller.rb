@@ -12,7 +12,7 @@ class UserController < ApplicationController
         if flash[:requested_url]
           redirect_to flash[:requested_url]
         else
-          redirect_to :controller => 'reservation', :action => 'index'
+          redirect_to new_reservation_url
         end
       else
         @auth_error = "Invalid login/password"
