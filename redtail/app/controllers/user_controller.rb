@@ -1,10 +1,8 @@
 require "digest/sha1"
  
-class MainController < ApplicationController
+class UserController < ApplicationController
   skip_filter :user_is_authenticated?
  
-  # the root index action for our application
-
   def login
     if request.post?
       @user = User.find_by_username(params[:login])
@@ -61,7 +59,6 @@ class MainController < ApplicationController
         break
       end
     end
- 
     redirect_to(:action => "index")
  
   end

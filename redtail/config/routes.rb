@@ -1,13 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.root :controller => "main"
+  map.root :controller => "user"
 
   # /reservations
   map.reservations "reservations/:action", :controller => "reservation"
-  map.connect 'confirm_email/:hash', :controller => "main", :action => "confirm_email"
-  map.logout 'logout', :controller => "main", :action => "logout"
-  map.login 'login', :controller => "main", :action => "login"
-  map.register 'register', :controller => 'main', :action => 'register'
+  map.connect 'confirm_email/:hash', :controller => "user", :action => "confirm_email"
+  map.logout 'logout', :controller => "user", :action => "logout"
+  map.login 'login', :controller => "user", :action => "login"
+  map.register 'register', :controller => 'user', :action => 'register'
   # 
   # The priority is based upon order of creation: first created -> highest priority.
 
