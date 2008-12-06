@@ -9,8 +9,8 @@ class UserController < ApplicationController
       
       if @user and @user.password_is? params[:password]
         session[:uid] = @user.id
-        if flash[:requested_url]
-          redirect_to flash[:requested_url]
+        if session[:requested_url]
+          redirect_to session[:requested_url]
         else
           redirect_to new_reservation_url
         end

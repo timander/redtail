@@ -27,6 +27,15 @@ class ReservationTest < ActiveSupport::TestCase
     assert_redirected_to :controller => 'reservation'
   end
   
+  def test_post_login_good_redirected_back_to_url
+    @request.session[:requested_url] = { :controller => 'restuarants'}
+    post :login, { "login" => "ron", "password" => "my_password" }
+
+    assert_equal users(:ron).id, @request.session[:uid]
+    assert_response :redirect
+    assert_redirected_to :controller => 'restuarants'
+  end
+  
   def test_post_login_bad_password
     post :login, { "login" => "ron", "password" => "BAD_PASSWORD" }
 
