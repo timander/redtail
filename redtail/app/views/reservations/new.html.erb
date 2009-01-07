@@ -8,8 +8,19 @@
     <%= f.text_field :restaurant %>
   </p>
   <p>
-    <%= f.label :lunch_period %><br />
-    <%= f.text_field :lunch_period %>
+    <%= f.label :lunch_period %>
+    <ul>
+    First <%= f.radio_button :lunch_period, :one %>
+    Second <%= f.radio_button :lunch_period, :two %>
+    Third <%= f.radio_button :lunch_period, :three %>
+    </ul>
+  </p>
+  <p>
+    <%= f.label :take_out %>
+    <ul>
+    Yes <%= f.radio_button :take_out, :yes %>
+    No <%= f.radio_button :take_out, :no %>
+    </ul>
   </p>
   <p>
     <%= f.label :special_request %><br />
