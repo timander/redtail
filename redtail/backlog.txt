@@ -2,11 +2,12 @@
 [X] allow account sign up
 [X] once logged in, show customer info
 [?] lock out other pages when not logged in 
-[ ] display dropdown of future restaurants on /reservations
+[ ] display drop down of future restaurants on /reservations
 [ ] make lunch periods radio buttons on /reservations
 [ ] require all fields except special request on /reservations
 [ ] get email confirmation to work (or strip it out)
 [ ] get rid of username? use email to login?
+[ ] when a restaurant is selected, show the description
 
 
 /restaurant

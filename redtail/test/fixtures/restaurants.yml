@@ -2,14 +2,14 @@
 
 one:
   name: Greek Lunch
-  date: 2008-10-30
+  date: 2009-02-07
   price: 6.00
   open: true
   description: Please join us for Roasted Red Pepper Chicken Pesto Pita Pockets.
 
 two:
   name: Italian Lunch
-  date: 2008-11-28
+  date: 2009-03-08
   price: 6.0
   open: false
   description: Please join us for Breadsticks and Lasagna.

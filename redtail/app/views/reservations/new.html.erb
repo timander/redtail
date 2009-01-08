@@ -5,7 +5,7 @@
 
   <p>
     <%= f.label :restaurant %><br />
-    <%= f.text_field :restaurant %>
+    <%= collection_select("restaurant", "id", Restaurant.find(:all), "id", "name_on_date") %>
   </p>
   <p>
     <%= f.label :lunch_period %>
