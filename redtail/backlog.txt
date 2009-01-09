@@ -1,15 +1,16 @@
 [X] make localhost:3000 redirect to login
 [X] allow account sign up
 [X] once logged in, show customer info
-[?] lock out other pages when not logged in 
-[ ] display drop down of future restaurants on /reservations
-[ ] make lunch periods radio buttons on /reservations
+[x] lock out other pages when not logged in 
+[x] make lunch periods radio buttons on /reservations
+[ ] display drop down of restaurants on /reservations
+[ ] when a restaurant is selected, show the description
+[ ] display only future restaurants on /reservations
 [ ] require all fields except special request on /reservations
 [ ] get email confirmation to work (or strip it out)
 [ ] get rid of username? use email to login?
-[ ] when a restaurant is selected, show the description
-
-
+[ ] pretty up css
+ 
 /restaurant
 allow user to make reservation
 	require choices

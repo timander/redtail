@@ -8,7 +8,7 @@ class UserController < ApplicationController
       @user = User.find_by_username(params[:login])
       
       if @user and @user.password_is? params[:password]
-        session[:uid] = @user.id
+        session[:user_id] = @user.id
         if session[:requested_url]
           redirect_to session[:requested_url]
         else
@@ -23,7 +23,7 @@ class UserController < ApplicationController
   end
   
   def logout
-    session[:uid] = nil
+    session[:user_id] = nil
     render :text => "you are logged out"
   end
   
