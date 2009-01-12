@@ -3,14 +3,19 @@
 [X] once logged in, show customer info
 [x] lock out other pages when not logged in 
 [x] make lunch periods radio buttons on /reservations
-[ ] display drop down of restaurants on /reservations
-[ ] when a restaurant is selected, show the description
+[x] display drop down of restaurants on /reservations
+[ ] show list of people attending restaurant (secure for admin user)
+[ ] indicate which users are admin users, allow admin priviliges
+[ ] add first and last name to user
+[ ] when a restaurant is selected, show the description and price
 [ ] display only future restaurants on /reservations
 [ ] require all fields except special request on /reservations
-[ ] get email confirmation to work (or strip it out)
-[ ] get rid of username? use email to login?
+[ ] get email confirmation to work (or rip it out)
+[ ] make lunch periods configurable, show times on reservation page
+[ ] get rid of username.  use email to login?
 [ ] pretty up css
- 
+
+
 /restaurant
 allow user to make reservation
 	require choices
