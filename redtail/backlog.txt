@@ -15,6 +15,7 @@
 [ ] get rid of username.  use email to login?
 [ ] pretty up CSS
 [ ] add other choices (dressing, drink) to reservation
+[ ] use the lunch period the user last selected as the default
 
 /restaurant
 allow user to make reservation
