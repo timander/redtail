@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20090113051314) do
   create_table "reservations", :force => true do |t|
     t.integer  "user_id"
     t.integer  "restaurant_id"
-    t.string   "lunch_period"
+    t.integer  "lunch_period_id"
     t.string   "take_out"
     t.string   "drink"
     t.string   "dressing"

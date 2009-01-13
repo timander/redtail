@@ -22,14 +22,14 @@ class ApplicationController < ActionController::Base
   private
 
   def user_is_authenticated?
-    unless (session[:uid])
+    unless session[:user_id]
       flash[:requested_url] = params
       redirect_to login_url
     end
   end
 
   def session_user
-    @user ||= User.find_by_id(session[:uid])
+    @user ||= User.find_by_id(session[:user_id])
   end
 
 end

@@ -1,7 +1,10 @@
 
-<p>Thank you for your reservation.<p>
+<h3>Thank you for your reservation, <%= @reservation.user.first_name%>.<h3>
 
 <p>
 	We'll see you for the <%= @reservation.restaurant.name %> 
-	on <%= @reservation.restaurant.date %>
+</p>
+<p>
+    on <%= @reservation.restaurant.date %>
+	for <%= @reservation.lunch_period.name%> lunch (<%= @reservation.lunch_period.begin_end_times%>).
 </p>
