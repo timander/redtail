@@ -16,6 +16,7 @@
 [ ] pretty up CSS
 [ ] add other choices (dressing, drink) to reservation
 [ ] use the lunch period the user last selected as the default
+[ ] nil check on lunch_period and restaurant in reservation_controller.rb
 
 /restaurant
 allow user to make reservation

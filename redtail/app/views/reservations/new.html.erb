@@ -7,11 +7,11 @@
 
   <p>
     <%= f.label :restaurant %>
-    <%= collection_select("restaurant", "id", Restaurant.find(:all), "id", "name_on_date") %>
+    <%= collection_select("restaurant", "id", Restaurant.find(:all), "id", "name_on_date", options ={:include_blank => true} ) %>
   </p>
   <p>
     <%= f.label :lunch_period %>
-    <%= collection_select("lunch_period", "id", LunchPeriod.find(:all, :order => :period), "id", "to_s") %>
+    <%= collection_select("lunch_period", "id", LunchPeriod.find(:all, :order => :period), "id", "to_s", options ={:include_blank => true} ) %>
   </p>
   <p>
     <%= f.label :take_out %>

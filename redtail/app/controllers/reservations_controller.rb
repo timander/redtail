@@ -16,11 +16,9 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    puts ">>>>>>>> in create"
     lunch_period = LunchPeriod.find(params[:lunch_period][:id])
-    puts lunch_period
-
     restaurant = Restaurant.find(params[:restaurant][:id])
+        
     user = User.find(session[:user_id])
     
     @reservation = Reservation.create(
