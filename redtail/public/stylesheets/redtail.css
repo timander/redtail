@@ -1,47 +1,50 @@
-body { background-color: #999B6A; color: #333; }
+body { 
+  background-color: #999B6A; 
+  color: #333; 
+}
 
 body, p, ol, ul, td {
   font-size: 14px;
   font-family: sans-serif;
   line-height: 12px;
 }
-	
+
 div {
-        width: 400px;
-        align: center;
+  width: 400px;
+  align: center;
 }
 
 table {
-        font-family: courier;
-        font-size: 10px;
-        line-height: 12px;
-        background-color: #B7B68E;
-        border-spacing: 8px;
-        border-color: #B7B68E;
+  font-family: courier;
+  font-size: 10px;
+  line-height: 12px;
+  background-color: #B7B68E;
+  border-spacing: 8px;
+  border-color: #B7B68E;
 }
 
 input {
-    border-color: black;
-    border-width: thin;
-    border-style: ridge;
-    font-size: 14px;
-    font-family: sans-serif;
-    font-weight: bolder;
-    background-color: #E9E9D1;
+  border-color: black;
+  border-width: thin;
+  border-style: ridge;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  background-color: #E9E9D1;
 }
 
 a {
-        color:  #000;
-        text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 a:visited {
-        color: #000;
+  color: #000;
 }
 
 a:hover {
-        color: #fff;
-        background-color:#000;
+  color: #fff;
+  background-color:#000;
 }
 
 #legal {
@@ -50,41 +53,28 @@ a:hover {
   text-align: right;
 }
 
-#left {
-    float: left;
-    width: 100px;
-    margin-left: 10px;
-        border: 0px;
-        border-color: black;
-        border-style: solid;
+#page {
+  background-color: #f0f0f0;
+  width: 750px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-div.main {
-    margin-left: 200px;
-        border: 1px;
-        border-color: black;
-        border-style: solid;
-        background-color: #D7D395;
-        padding: 20px;
+#content {
+  float: left;
+  background-color: white;
+  border: 3px solid #aaa;
+  border-top: none;
+  padding: 25px;
+  width: 500px;
 }
 
-#right {
-        border: 1px;
-        border-color: black;
-        border-style: solid;
-        background-color: #CCE78D;
-    float: right;
-        width: 250px;
-        margin-right: 100px;
-        padding: 10px;
+#main {
+  border-top: 1px solid #ccc;
+  margin-top: 25px;
+  padding-top: 15px;
+  padding-left: 75px;
+  padding-right: 30px;
 }
 
-#added_ingredients {
-        border: 1px;
-        border-color: black;
-        border-style: solid;
-        background-color: #D2CB9D;
-        width: 400px;
-        margin-right: 100px;
-        padding: 10px;
-}

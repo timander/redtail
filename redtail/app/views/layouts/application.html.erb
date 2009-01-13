@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -9,15 +12,22 @@
     <%= javascript_include_tag :defaults %>
   </head>
   <body>
-    <h1>The Hungry Hawk</h1>
-    <div id="container">
-      <div id="main">
-        <%= yield %>
+
+	<div id="page">    
+
+	  <div id="content">
+
+	    <h1>The Hungry Hawk</h1>
+
+        <div id="main">
+              <%= yield %>
+        </div>
+
+        <hr/>
+        <p id="legal">Copyright &copy; 2009, T. Andersen</p>
+
       </div>
-      <div class="right">
-      </div>
+
     </div>
-    <hr/>
-    <p id="legal">Copyright &copy; 2009, T. Andersen</p>
   </body>
 </html>
