@@ -1,30 +1,32 @@
 <h2>Please make a reservation</h2>
 
 <% form_for(@reservation) do |f| %>
-  <%= f.error_messages %>
+  <p class="error">
+    <%= f.error_messages %>
+  </p>
 
   <p>
-    <%= f.label :restaurant %><br />
+    <%= f.label :restaurant %>
     <%= collection_select("restaurant", "id", Restaurant.find(:all), "id", "name_on_date") %>
   </p>
   <p>
     <%= f.label :lunch_period %>
     <ul>
-    First <%= f.radio_button :lunch_period, :one %>
-    Second <%= f.radio_button :lunch_period, :two %>
-    Third <%= f.radio_button :lunch_period, :three %>
+    <li>First <%= f.radio_button :lunch_period, :one %></li>
+    <li>Second <%= f.radio_button :lunch_period, :two %></li>
+    <li>Third <%= f.radio_button :lunch_period, :three %></li>
     </ul>
   </p>
   <p>
     <%= f.label :take_out %>
     <ul>
-    Yes <%= f.radio_button :take_out, :yes %>
-    No <%= f.radio_button :take_out, :no %>
+    <li>Yes <%= f.radio_button :take_out, :yes %></li>
+    <li>No <%= f.radio_button :take_out, :no %></li>
     </ul>
   </p>
   <p>
     <%= f.label :special_request %><br />
-    <%= f.text_area :special_request %>
+    <%= f.text_area :special_request, :size => '40x4'%>
   </p>
   <p>
     <%= f.submit "Make Reservation" %>

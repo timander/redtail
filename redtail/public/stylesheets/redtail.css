@@ -47,6 +47,11 @@ a:hover {
   background-color:#000;
 }
 
+#errorExplanation {
+  font-size: 14px;
+  font-color: red;	
+}
+
 #legal {
   font-size: 9px;
   font-style: italic;
