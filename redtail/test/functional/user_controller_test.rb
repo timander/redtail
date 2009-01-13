@@ -20,7 +20,7 @@ class UserControllerTest < ActionController::TestCase
   end
 
   def test_post_login_good
-    post :login, { "login" => "ron", "password" => "my_password" }
+    post :login, { "username" => "ron", "password" => "my_password" }
 
     assert_equal users(:ron).id, @request.session[:user_id]
     assert_response :redirect
@@ -29,7 +29,7 @@ class UserControllerTest < ActionController::TestCase
   
   def test_post_login_good_redirected_back_to_url
     @request.session[:requested_url] = { :controller => 'restuarants'}
-    post :login, { "login" => "ron", "password" => "my_password" }
+    post :login, { "username" => "ron", "password" => "my_password" }
 
     assert_equal users(:ron).id, @request.session[:user_id]
     assert_response :redirect
@@ -37,7 +37,7 @@ class UserControllerTest < ActionController::TestCase
   end
   
   def test_post_login_bad_password
-    post :login, { "login" => "ron", "password" => "BAD_PASSWORD" }
+    post :login, { "username" => "ron", "password" => "BAD_PASSWORD" }
 
     assert_nil @request.session[:user_id]
     assert_response :success
@@ -45,7 +45,7 @@ class UserControllerTest < ActionController::TestCase
   end
 
   def test_post_login_bad_user
-    post :login, { "login" => "bad_user", "password" => "my_password" }
+    post :login, { "username" => "bad_user", "password" => "my_password" }
 
     assert_nil @request.session[:user_id]
     assert_response :success

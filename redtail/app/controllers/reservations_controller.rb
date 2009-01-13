@@ -16,11 +16,16 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    puts ">>>>>>>> in create"
+    lunch_period = LunchPeriod.find(params[:lunch_period][:id])
+    puts lunch_period
+
     restaurant = Restaurant.find(params[:restaurant][:id])
     user = User.find(session[:user_id])
+    
     @reservation = Reservation.create(
                 params[:reservation].merge(
-                  :restaurant => restaurant, :user => user))
+                  :restaurant => restaurant, :user => user, :lunch_period => lunch_period))
     if @reservation.valid?
       flash[:notice] = "Thank you for your reservation, #{user.username}.  We'll see you at the #{restaurant.name} on #{restaurant.date}."
       redirect_to reservation_url(@reservation)

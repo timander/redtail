@@ -11,11 +11,7 @@
   </p>
   <p>
     <%= f.label :lunch_period %>
-    <ul>
-    <li>First <%= f.radio_button :lunch_period, :one %></li>
-    <li>Second <%= f.radio_button :lunch_period, :two %></li>
-    <li>Third <%= f.radio_button :lunch_period, :three %></li>
-    </ul>
+    <%= collection_select("lunch_period", "id", LunchPeriod.find(:all, :order => :period), "id", "to_s") %>
   </p>
   <p>
     <%= f.label :take_out %>

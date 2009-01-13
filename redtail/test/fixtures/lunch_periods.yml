@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  period: 1
+  name: 'first'
+  begin_end_times: '11:20 - 11:50'
+
+two:
+  period: 2
+  name: 'second'
+  begin_end_times: '11:50 - 12:20'
+
+three:
+  period: 3
+  name: 'third'
+  begin_end_times: '12:20 - 12:50'
