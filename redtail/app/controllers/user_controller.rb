@@ -5,7 +5,7 @@ class UserController < ApplicationController
  
   def login
     if request.post?
-      @user = User.find_by_username(params[:login])
+      @user = User.find_by_username(params[:username])
       
       if @user and @user.password_is? params[:password]
         session[:user_id] = @user.id

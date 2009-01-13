@@ -4,9 +4,9 @@
 [x] lock out other pages when not logged in 
 [x] make lunch periods radio buttons on /reservations
 [x] display drop down of restaurants on /reservations
+[ ] add first and last name to user
 [ ] show list of people attending restaurant (secure for admin user)
 [ ] indicate which users are admin users, allow admin privileges
-[ ] add first and last name to user
 [ ] when a restaurant is selected, show the description and price
 [ ] display only future restaurants on /reservations
 [ ] require all fields except special request on /reservations
