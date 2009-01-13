@@ -1,11 +1,11 @@
-[X] make localhost:3000 redirect to login
+[X] make http://localhost:3000 redirect to login
 [X] allow account sign up
 [X] once logged in, show customer info
 [x] lock out other pages when not logged in 
 [x] make lunch periods radio buttons on /reservations
 [x] display drop down of restaurants on /reservations
 [ ] show list of people attending restaurant (secure for admin user)
-[ ] indicate which users are admin users, allow admin priviliges
+[ ] indicate which users are admin users, allow admin privileges
 [ ] add first and last name to user
 [ ] when a restaurant is selected, show the description and price
 [ ] display only future restaurants on /reservations
@@ -13,8 +13,8 @@
 [ ] get email confirmation to work (or rip it out)
 [ ] make lunch periods configurable, show times on reservation page
 [ ] get rid of username.  use email to login?
-[ ] pretty up css
-
+[ ] pretty up CSS
+[ ] add other choices (dressing, drink) to reservation
 
 /restaurant
 allow user to make reservation
