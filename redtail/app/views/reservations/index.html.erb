@@ -1,4 +1,6 @@
-<h1>Welcome <%= @user.username %></h1>
+<h1>Welcome <%= @user.first_name %></h1>
 
-<p>Please make a <%= link_to "reservation", new_reservation_url %>!</p>
+<p>
+  <%= link_to "Please make a reservation", new_reservation_url %>
+</p>
 

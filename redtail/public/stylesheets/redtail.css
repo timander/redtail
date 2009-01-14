@@ -52,6 +52,12 @@ a:hover {
   font-color: red;	
 }
 
+#large_link {
+  font-size: 20px;
+  font-style: italic;
+  text-align: right;
+}
+
 #legal {
   font-size: 9px;
   font-style: italic;
