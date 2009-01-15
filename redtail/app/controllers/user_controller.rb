@@ -5,7 +5,7 @@ class UserController < ApplicationController
  
   def login
     if request.post?
-      @user = User.find_by_username(params[:username])
+      @user = User.find_by_email(params[:email])
       
       if @user and @user.password_is? params[:password]
         session[:user_id] = @user.id
@@ -36,7 +36,7 @@ class UserController < ApplicationController
       @user = User.new(params[:user])
 
       if @user.save
-        MailRobot::deliver_confirmation_email(@user, confirmation_hash(@user.username))
+        MailRobot::deliver_confirmation_email(@user, confirmation_hash(@user.email))
 
         flash[:notice] = "Thank you for registering! We have sent a confirmation email to #{@user.email} with instructions on how to validate your account."
         redirect_to root_url
@@ -52,7 +52,7 @@ class UserController < ApplicationController
 
     for user in @users
       # if the passed hash matches up with a User, confirm him, log him in, set proper flash[:notice], and stop looking
-      if confirmation_hash(user.username) == params[:hash] and !user.email_confirmed
+      if confirmation_hash(user.email) == params[:hash] and !user.email_confirmed
         user.update_attributes(:email_confirmed => true)
         session[:user_id] = user.id
         flash[:notice] = "Thank you for validating your email."

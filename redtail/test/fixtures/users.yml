@@ -1,7 +1,6 @@
 ron:
-  username: ron
-  hashed_password: 5eb942810a75ebc850972a89285d570d484c89c4 # my_password
   email: ron@ron.com
+  hashed_password: 5eb942810a75ebc850972a89285d570d484c89c4 # my_password
   first_name: Ron
   last_name: Jon
   email_confirmed: true

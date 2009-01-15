@@ -7,7 +7,7 @@ class MailRobot < ActionMailer::Base
     @subject = "Confirm email address"
 
     # email body substitutions go here
-    @body["username"] = user.username
+    @body["email"] = user.email
     @body["hash"] = hash
   end
 

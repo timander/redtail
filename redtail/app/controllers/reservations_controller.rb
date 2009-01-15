@@ -22,7 +22,6 @@ class ReservationsController < ApplicationController
                   :user => session_user, 
                   :lunch_period_id => params[:lunch_period][:id]))
     if @reservation.valid?
-      #flash[:notice] = "Thank you for your reservation, #{@reservation.user.username}.  We'll see you at the #{@reservation.restaurant.name} on #{@reservation.restaurant.date}."
       redirect_to reservation_url(@reservation)
     else
       render :action => "new"

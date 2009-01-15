@@ -4,9 +4,8 @@ class User < ActiveRecord::Base
   
   has_many :reservations
   
-  validates_presence_of :username, :first_name, :last_name, :email
-  validates_uniqueness_of :username
-  validates_length_of :username, :minimum => 4
+  validates_presence_of :email, :first_name, :last_name
+  validates_uniqueness_of :email
 
   attr_accessor :password, :confirm_password
  
@@ -16,10 +15,9 @@ class User < ActiveRecord::Base
  
   # callback hooks
  
-    # clean up email and username before validation
+    # clean up email before validation
     def before_validation
       self.email = User.clean_string(self.email || "")
-      self.username = User.clean_string(self.username || "")
     end
 
     # validate that password and confirm_password match, and that email is proper format
