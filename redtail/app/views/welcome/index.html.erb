@@ -2,12 +2,21 @@
 <p>
   Join Ankeny High School’s Hungry Hawk students 
   on the west side of the Media Center 
-  for lunch at the Hungry Hawk Restaurant 
-  on <%= nice_date @restaurant.date %>
-  during 1st (<%= @first_lunch.begin_end_times %>) lunch.
+  during 1st lunch (<%= @first_lunch.begin_end_times %>).
   If you have 2nd lunch (<%= @second_lunch.begin_end_times %>) 
   you can pick up your lunch to go in our kitchen.
 </p>
+
+<hr/>
+
+<h3>The next lunch at the Hungry Hawk Restaurant</h3>
+
+<p style='font-style: italic; text-align: center'>
+  <%= @next_restaurant.name %> on <%= nice_date @next_restaurant.date %>
+</p>
+
+<hr/>
+
 <p>
   This meal will help the students gain valuable, 
   real-world experience in many aspects of working 
