@@ -4,6 +4,7 @@ class CreateLunchPeriods < ActiveRecord::Migration
       t.integer :period
       t.string :name
       t.string :begin_end_times
+      t.boolean :to_go_available
 
       t.timestamps
     end

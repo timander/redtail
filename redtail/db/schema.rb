@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20090113051314) do
     t.integer  "period"
     t.string   "name"
     t.string   "begin_end_times"
+    t.boolean  "to_go_available"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

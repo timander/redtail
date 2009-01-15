@@ -11,6 +11,7 @@ Phase I: Hungry Hawk Restaurant
 [x] add first and last name to user
 [x] require all fields except special request on /reservations
 [x] make lunch periods configurable, show times on reservation page
+[ ] display next restaurant info on the welcome page
 [ ] get rid of username.  use email to login?
 [ ] get email confirmation to work (or rip it out)
 [ ] show list of people attending restaurant (secure for admin user)
@@ -19,7 +20,6 @@ Phase I: Hungry Hawk Restaurant
 [ ] display only future restaurants on /reservations
 [ ] add other choices (dressing, drink) to reservation
 [ ] use the lunch period the user last selected as the default
-[ ] display next restaurant info on the welcome page
 [ ] display On The Menu: on the welcome page
 [ ] display location of restaurant on the welcome page
 [ ] display the cost of the restaurant on the welcome page
@@ -28,12 +28,14 @@ Phase I: Hungry Hawk Restaurant
 [ ] add number of guests to registration (with guest names)
 [ ] cut take out over to a checkbox instead of a radio button
 [ ] require drink, dressing if take out is selected
+[ ] admin user should be able to put special messages on the welcome page
 [ ] admin user should be able to view a list of restaurant attendees
 [ ] admin user should be able to view a grocery list of ingredients for a restaurant
 [ ] admin user should be able to create new restaurants
 [ ] regular user must confirm registration by verifying email received
 [ ] admin user should be able to send mass email reminder to everyone who has registered
-
+[ ] allow user to change their email address and other personal info
+[ ] show email address of logged in user
 
 -------------------------------
 Phase II: Hungry Hawk @ Home

@@ -3,9 +3,9 @@
   Join Ankeny High School’s Hungry Hawk students 
   on the west side of the Media Center 
   for lunch at the Hungry Hawk Restaurant 
-  on Thursday November 20, 2008 
-  during 1st (11:10-11:40) lunch.
-  If you have 2nd lunch (12:00-12:30) 
+  on <%= nice_date @restaurant.date %>
+  during 1st (<%= @first_lunch.begin_end_times %>) lunch.
+  If you have 2nd lunch (<%= @second_lunch.begin_end_times %>) 
   you can pick up your lunch to go in our kitchen.
 </p>
 <p>
