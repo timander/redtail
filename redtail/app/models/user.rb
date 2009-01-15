@@ -39,6 +39,9 @@ class User < ActiveRecord::Base
       @confirm_password = nil
     end
 
+    def name
+      "#{first_name} #{last_name}"
+    end
  
   private
  

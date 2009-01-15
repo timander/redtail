@@ -36,6 +36,7 @@ Phase I: Hungry Hawk Restaurant
 [ ] admin user should be able to send mass email reminder to everyone who has registered
 [ ] allow user to change their email address and other personal info
 [ ] show email address of logged in user
+[ ] admin user should be able to add a reservation for a regular user
 
 -------------------------------
 Phase II: Hungry Hawk @ Home

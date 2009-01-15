@@ -1,6 +1,22 @@
-<h1>Welcome <%= @user.first_name %></h1>
+<h3>Reservations</h3>
 
-<p>
-  <%= link_to "Please make a reservation", new_reservation_url %>
-</p>
+<table>
+  <tr>
+    <th>Restaurant</th>
+    <th>Date</th>
+    <th>Name</th>
+    <th>Special Request</th>
+  </tr>
+		
+<% for reservation in @reservations %>
+  <tr>
+    <td><%=h reservation.restaurant.name %></td>
+    <td><%=h reservation.restaurant.date %></td>
+    <td><%=h reservation.user.name %></td>
+    <td><%=h reservation.special_request %></td>
+  </tr>
+<% end %>
+
+</table>
+
 

@@ -1,7 +1,7 @@
 class ReservationsController < ApplicationController
     
   def index
-    @user = session_user
+    @reservations = Reservation.find(:all)
   end
   
   # GET /reservations/new
