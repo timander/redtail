@@ -35,7 +35,7 @@ class UserController < ApplicationController
       @user = User.new(params[:user])
 
       if @user.save
-        MailRobot::deliver_confirmation_email(@user, confirmation_hash(@user.email))
+        MailRobot::deliver_confirmation_email(@user, confirmation_hash(@user.email), root_url)
 
         flash[:notice] = "Thank you for registering! We have sent a confirmation email to #{@user.email} with instructions on how to validate your account."
         redirect_to root_url
