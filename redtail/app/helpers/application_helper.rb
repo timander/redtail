@@ -5,5 +5,9 @@ module ApplicationHelper
    def nice_date(date)
      h date.strftime("%A %B %d, %Y")
    end
+   
+   def admin?
+     session_user.admin?
+   end
   
 end

@@ -1,5 +1,7 @@
 class ReservationsController < ApplicationController
     
+  before_filter :admin?, :except => new
+    
   def index
     @reservations = Reservation.find(:all)
   end

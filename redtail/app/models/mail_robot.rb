@@ -3,7 +3,7 @@ class MailRobot < ActionMailer::Base
   def confirmation_email(user,hash)
     # email header info MUST be added here
     @recipients = user.email
-    @from = "fromaddress@website-url-here.com"
+    @from = "admin@hungryhawk.org"
     @subject = "Confirm email address"
 
     # email body substitutions go here
