@@ -14,11 +14,11 @@ Phase I: Hungry Hawk Restaurant
 [x] display next restaurant info on the welcome page
 [x] get rid of username.  use email to login?
 [x] get email confirmation to work (or rip it out)
-[ ] use nice name in the from part of email (The Hungry Hawk)
+[x] use nice name in the from part of email (The Hungry Hawk)
+[x] use dynamic root_url in email confirmation message
+[x] indicate which users are admin users, allow admin privileges
 [ ] don't allow login unless email is confirmed
-[ ] use dynamic root_url in email confirmation message
 [ ] show list of people attending restaurant (secure for admin user)
-[ ] indicate which users are admin users, allow admin privileges
 [ ] when a restaurant is selected, show the description and price, and menu details
 [ ] display only future restaurants on /reservations
 [ ] add other choices (dressing, drink) to reservation
