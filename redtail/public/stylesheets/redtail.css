@@ -49,24 +49,6 @@ a:hover {
 	text-align: right;
 }
 
-#notice {
-  font-color: green;
-  border-color: black;
-  border-width: thin;
-  border-style: ridge;
-  font-size: 14px;
-  font-family: sans-serif;
-  font-weight: bolder;
-  background-color: #D3D3D3;
-  padding: 8px;
-}
-
-
-#errorExplanation {
-  font-size: 14px;
-  font-color: red;	
-}
-
 #large_link {
   font-size: 20px;
   font-style: italic;
@@ -89,17 +71,18 @@ a:hover {
 
 #content {
   float: left;
-  background-color: white;
-  border: 3px solid #aaa;
-  border-top: none;
+  background-color: #ffffff;
+  border: 2px solid #000000;
   padding: 25px;
   width: 500px;
 }
 
 #main {
   border-top: 1px solid #ccc;
-  margin-top: 25px;
-  padding-top: 15px;
+  border-bottom: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
   padding-left: 75px;
   padding-right: 30px;
 }
