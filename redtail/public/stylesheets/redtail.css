@@ -45,6 +45,23 @@ a:hover {
   background-color:#000;
 }
 
+#login {
+	text-align: right;
+}
+
+#notice {
+  font-color: green;
+  border-color: black;
+  border-width: thin;
+  border-style: ridge;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  background-color: #D3D3D3;
+  padding: 8px;
+}
+
+
 #errorExplanation {
   font-size: 14px;
   font-color: red;	

@@ -5,9 +5,17 @@ module ApplicationHelper
    def nice_date(date)
      h date.strftime("%A %B %d, %Y")
    end
-   
-   def admin?
-     session_user.admin?
+
+   def logged_in?
+     if session[:user_id].nil?
+       return false
+     else
+       return true
+    end
    end
-  
+
+   def session_user
+     @user ||= User.find_by_id(session[:user_id])
+   end
+
 end

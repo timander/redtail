@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-    
+  
   before_filter :admin?, :except => new
     
   def index
@@ -21,7 +21,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.create(
                 params[:reservation].merge(
                   :restaurant_id => params[:restaurant][:id], 
-                  :user => session_user, 
+                  :user_id => session[:user_id], 
                   :lunch_period_id => params[:lunch_period][:id]))
     if @reservation.valid?
       redirect_to reservation_url(@reservation)

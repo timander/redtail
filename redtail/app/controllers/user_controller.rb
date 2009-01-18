@@ -24,7 +24,6 @@ class UserController < ApplicationController
   
   def logout
     session[:user_id] = nil
-    render :text => "you are logged out"
   end
   
   # allows guests to create a new User

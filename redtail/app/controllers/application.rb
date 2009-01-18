@@ -28,6 +28,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def admin?
+    session_user.admin?
+  end
+
   def session_user
     @user ||= User.find_by_id(session[:user_id])
   end
