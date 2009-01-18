@@ -6,24 +6,25 @@
 	<%= label :email, :email %>
 	<%= text_field "user", "email", "maxlength" => 50, "size" => 20 %>
 </p>
-
 <p>
 	<%= label :first_name, :first_name %>
-	<%= text_field "user", "first_name", "maxlength" => 20, "size" => 20 %><br/>
+	<%= text_field "user", "first_name", "maxlength" => 20, "size" => 20 %>
+</p>
+<p>
 	<%= label :last_name, :last_name %>
 	<%= text_field "user", "last_name", "maxlength" => 20, "size" => 20 %>
 </p>
-
 <p>
 	<%= label :password, :password %>
 	<%= password_field "user", "password", "maxlength" => 20, "size" => 20 %>
 </p>
-
 <p>
 	<%= label :confirm_password, :confirm_password %>
 	<%= password_field "user", "confirm_password", "maxlength" => 20, "size" => 20 %>
 </p>
 
-<input type="submit" value="sign up" /></p>
+<p>
+  <%= submit_tag "sign up" %>
+</p>
 
 <% end %>
