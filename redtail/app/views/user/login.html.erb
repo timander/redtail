@@ -1,3 +1,6 @@
+<fieldset>
+<legend>Please Log In</legend>
+
 <div>
 <%= '<font color="red">'+@auth_error+'</font><hr />' if @auth_error %>
 <% form_tag(:action => 'login') do %>
@@ -14,3 +17,4 @@
   </p>
 <% end %>
 </div>
+</fieldset>

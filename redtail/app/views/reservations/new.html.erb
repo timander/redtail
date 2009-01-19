@@ -1,4 +1,6 @@
-<h2>Please make a reservation</h2>
+<fieldset>
+<legend>New Reservation</legend>
+
 
 <% form_for(@reservation) do |f| %>
   <p class="error">
@@ -15,18 +17,16 @@
   </p>
   <p>
     <%= f.label :take_out %>
-    <ul>
-    <li>Yes <%= f.radio_button :take_out, :yes %></li>
-    <li>No <%= f.radio_button :take_out, :no %></li>
-    </ul>
+    Yes <%= f.radio_button :take_out, :yes %>
+    No <%= f.radio_button :take_out, :no %>
   </p>
   <p>
-    <%= f.label :special_request %><br />
-    <%= f.text_area :special_request, :size => '40x4'%>
+    <%= f.label :special_request %>
+    <%= f.text_area :special_request, :size => '32x3'%>
   </p>
   <p>
     <%= f.submit "Make Reservation" %>
   </p>
 <% end %>
 
-<%= link_to 'Back', reservations_url %>
+</fieldset>

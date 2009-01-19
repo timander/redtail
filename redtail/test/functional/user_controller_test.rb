@@ -10,12 +10,11 @@ class UserControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_nil @request.session[:user_id]
-    assert_equal "you are logged out", @response.body
   end
 
   def test_get_login
     get :login
-
+    
     assert_response :success
   end
 
@@ -29,6 +28,7 @@ class UserControllerTest < ActionController::TestCase
   
   def test_post_login_good_redirected_back_to_url
     @request.session[:requested_url] = { :controller => 'restuarants'}
+    
     post :login, { "email" => "ron@ron.com", "password" => "my_password" }
 
     assert_equal users(:ron).id, @request.session[:user_id]
