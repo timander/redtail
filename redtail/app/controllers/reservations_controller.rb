@@ -12,10 +12,7 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.create(
-                params[:reservation].merge(
-                  :restaurant_id => params[:restaurant][:id], 
-                  :user_id => session[:user_id], 
-                  :lunch_period_id => params[:lunch_period][:id]))
+                params[:reservation].merge(:user_id => session[:user_id]))
     if @reservation.valid?
       redirect_to reservation_url(@reservation)
     else

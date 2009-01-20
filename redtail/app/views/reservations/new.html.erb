@@ -8,12 +8,12 @@
   </p>
 
   <p>
-    <%= f.label :restaurant %>
-    <%= collection_select("restaurant", "id", Restaurant.find(:all), "id", "name_on_date", options ={:include_blank => true} ) %>
+    <%= f.label :restaurant_id %>
+    <%= collection_select("reservation", "restaurant_id", Restaurant.find(:all), "id", "name_on_date", options ={:include_blank => true} ) %>
   </p>
   <p>
-    <%= f.label :lunch_period %>
-    <%= collection_select("lunch_period", "id", LunchPeriod.find(:all, :order => :period), "id", "to_s", options ={:include_blank => true} ) %>
+    <%= f.label :lunch_period_id %>
+    <%= collection_select("reservation", "lunch_period_id", LunchPeriod.find(:all, :order => :period), "id", "to_s", options ={:include_blank => true} ) %>
   </p>
   <p>
     <%= f.label :take_out %>

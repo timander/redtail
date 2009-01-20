@@ -40,7 +40,7 @@ class ReservationsControllerTest < ActionController::TestCase
     logged_in_as users(:ron)
 
     assert_difference('Reservation.count') do
-      post :create, {:reservation => { }, :restaurant => { :id => restaurants(:italian).id }, :lunch_period => { :id => lunch_periods(:one).id} }
+      post :create, {:reservation => {:restaurant_id => restaurants(:italian).id, :lunch_period_id => lunch_periods(:one).id} }
     end
     
     assert_response :redirect
