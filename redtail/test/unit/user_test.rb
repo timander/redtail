@@ -69,11 +69,38 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors.on(:password)    
   end
 
-  def test_password
-    user = User.new
-    user.password = 'secret'
-    #assert user.password_is?('secret')
-    #assert(user.password != 'secret', 'password should be encrypted')
+  test "password is not persisted" do
+    user = User.create(@options)
+    assert_nil user.password
+    assert_nil user.confirm_password
+    saved_user = User.find(user.id)
+    assert_nil saved_user.password
+    assert_nil saved_user.confirm_password
   end
-  
+
+  test "cleans email" do
+    @options[:email] = "TEST @ TEst. COM"
+    user = User.create(@options)
+    assert_equal "test@test.com", user.email
+  end
+
+  test "hashes password" do
+    password_hashed = Digest::SHA1.hexdigest(@options[:password])
+    user = User.create(@options)
+    assert_equal password_hashed, user.hashed_password
+  end
+
+  test "password_is?" do
+    password_hashed = Digest::SHA1.hexdigest(@options[:password])
+    user = User.create(@options)
+    assert user.password_is?(@options[:password])
+  end
+
+  test "name" do
+    @options[:first_name] = "First"
+    @options[:last_name] = "Last"
+    user = User.new(@options)
+    assert_equal "First Last", user.name
+  end
+
 end
