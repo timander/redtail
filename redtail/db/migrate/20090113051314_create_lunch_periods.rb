@@ -5,6 +5,7 @@ class CreateLunchPeriods < ActiveRecord::Migration
       t.string :name
       t.string :begin_end_times
       t.boolean :to_go_available
+      t.boolean :eat_in_available
 
       t.timestamps
     end

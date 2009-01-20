@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20090113051314) do
     t.string   "name"
     t.string   "begin_end_times"
     t.boolean  "to_go_available"
+    t.boolean  "eat_in_available"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
