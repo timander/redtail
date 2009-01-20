@@ -13,7 +13,7 @@
 	  <div id="content">
         <p id="login">
 			<% if logged_in? %>
-			  <%= session_user.email unless session_user.blank? %><br />
+			  <%= @user.email unless @user.nil? %><br />
 			  <%= link_to 'Log out', logout_url %>
 			<% else %>
 			  <%= link_to 'Log in', login_url %> / <%= link_to 'Register', register_url %>

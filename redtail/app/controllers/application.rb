@@ -22,7 +22,9 @@ class ApplicationController < ActionController::Base
   private
 
   def user_is_authenticated?
-    unless session[:user_id]
+    if session[:user_id]
+      @user = session_user
+    else
       flash[:requested_url] = params
       redirect_to login_url
     end

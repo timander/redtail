@@ -3,6 +3,7 @@ require 'test_helper'
 class UserControllerTest < ActionController::TestCase
   fixtures :users
 
+
   def test_logout
     @request.session[:user_id] = "something"
 
@@ -51,4 +52,14 @@ class UserControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal "Invalid login/password", assigns["auth_error"]
   end
+  
+  def test_confirm_email
+    get :confirm_email
+    
+    assert_redirected_to root_url
+  end
+  
+  
+  
+  
 end

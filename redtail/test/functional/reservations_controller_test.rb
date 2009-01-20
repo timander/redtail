@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ReservationsControllerTest < ActionController::TestCase
+
   fixtures :reservations, :users, :lunch_periods
 
   test "routes" do
