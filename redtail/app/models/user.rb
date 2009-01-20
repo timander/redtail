@@ -10,35 +10,30 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   validates_format_of :email, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/
 
+  before_validation :clean_email
+  before_create :encrypt_password
+
   def password_is?(pw)
     hashed_password == Digest::SHA1.hexdigest(pw)
   end
   
-  # callback hooks
-  
-  # clean up email before validation
-  def before_validation
-    self.email = User.clean_string(self.email || "")
-  end
-
-  # hash password before create
-  def before_create
-    self.hashed_password = User.hash_password(self.password)
-  end
-
   def name
     "#{first_name} #{last_name}"
   end
   
   private
+
+  def clean_email
+    self.email = email.downcase.gsub(" ", "") if email
+  end
+
+  def encrypt_password
+    self.hashed_password = User.hash_password(self.password)
+  end
+
   # hash password for storage in database
   def self.hash_password(password)
     Digest::SHA1.hexdigest(password)
   end
   
-  # clean string to remove spaces and force lowercase
-  def self.clean_string(string)
-    (string.downcase).gsub(" ","")
-  end
-
 end
