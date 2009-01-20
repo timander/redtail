@@ -13,8 +13,20 @@ class UserTest < ActiveSupport::TestCase
     }
   end
 
-  test "requires password" do
+  test "valid" do
+    user = User.create(@options)
+    assert user.valid?
+  end
+
+  test "requires email" do
     @options.delete :email
+    user = User.new(@options)
+    assert !user.valid?
+    assert user.errors.on(:email)
+  end
+
+  test "requires valid email" do
+    @options[:email] = "bad.email"
     user = User.new(@options)
     assert !user.valid?
     assert user.errors.on(:email)
@@ -40,6 +52,21 @@ class UserTest < ActiveSupport::TestCase
     user = User.create(@options)
     assert !user.valid?
     assert_equal "has already been taken", user.errors.on(:email)
+  end
+
+  test "confirmation of password" do
+    @options[:confirm_password] = "password_doesnt_match"
+    user = User.create(@options)
+    assert !user.valid?
+    assert user.errors.on(:confirm_password)
+  end
+
+  test "requires password" do
+    @options[:password] = ""
+    @options[:confirm_password] = ""
+    user = User.create(@options)
+    assert !user.valid?
+    assert user.errors.on(:password)    
   end
 
   def test_password
