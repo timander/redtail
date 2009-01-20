@@ -6,7 +6,7 @@ class UserTest < ActiveSupport::TestCase
     @options = {
       :email => "asdf@asdf.com",
       :password => "password1",
-      :confirm_password => "password1",
+      :password_confirmation => "password1",
       :first_name => "First",
       :last_name => "Last",
       :email_confirmed => false
@@ -55,15 +55,15 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "confirmation of password" do
-    @options[:confirm_password] = "password_doesnt_match"
+    @options[:password_confirmation] = "password_doesnt_match"
     user = User.create(@options)
     assert !user.valid?
-    assert user.errors.on(:confirm_password)
+    assert user.errors.on(:password)
   end
 
   test "requires password" do
     @options[:password] = ""
-    @options[:confirm_password] = ""
+    @options[:password_confirmation] = ""
     user = User.create(@options)
     assert !user.valid?
     assert user.errors.on(:password)    
@@ -71,11 +71,9 @@ class UserTest < ActiveSupport::TestCase
 
   test "password is not persisted" do
     user = User.create(@options)
-    assert_nil user.password
-    assert_nil user.confirm_password
     saved_user = User.find(user.id)
     assert_nil saved_user.password
-    assert_nil saved_user.confirm_password
+    assert_nil saved_user.password_confirmation
   end
 
   test "cleans email" do
