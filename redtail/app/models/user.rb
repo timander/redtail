@@ -5,9 +5,10 @@ class User < ActiveRecord::Base
 
   attr_accessor :password
   
-  validates_presence_of :email, :first_name, :last_name
+  validates_presence_of :email, :first_name, :last_name, :password
   validates_uniqueness_of :email
   validates_confirmation_of :password
+  validates_format_of :email, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/
 
   def password_is?(pw)
     hashed_password == Digest::SHA1.hexdigest(pw)
@@ -20,13 +21,6 @@ class User < ActiveRecord::Base
     self.email = User.clean_string(self.email || "")
   end
 
-  # validate that password and confirm_password match, and that email is proper format
-  def validate_on_create
-    @email_format = Regexp.new(/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/)
-    errors.add(:email, "must be a valid format") unless @email_format.match(email)
-    errors.add(:password, "cannot be blank") unless !password or password.length > 0
-  end
-  
   # hash password before create
   def before_create
     self.hashed_password = User.hash_password(self.password)
