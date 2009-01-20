@@ -31,4 +31,9 @@ class ReservationTest < ActiveSupport::TestCase
     assert reservation.errors.on(:lunch_period)
   end
   
+  def test_save_validate_user
+    reservation = Reservation.new(:restaurant => restaurants(:greek), :lunch_period => lunch_periods(:first), :take_out => 'no')
+    assert !reservation.save, "Saved reservation without user"
+  end
+  
 end
