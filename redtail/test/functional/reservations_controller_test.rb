@@ -3,6 +3,13 @@ require 'test_helper'
 class ReservationsControllerTest < ActionController::TestCase
   fixtures :reservations, :users, :lunch_periods
 
+  test "routes" do
+    assert_routing '/reservations', {:controller => "reservations", :action => "index"}
+    assert_routing '/reservations/new', {:controller => "reservations", :action => "new"}
+    assert_routing '/reservations/1', {:controller => "reservations", :action => "show", :id => "1"}
+    assert_routing({:method => 'post', :path => '/reservations'}, {:controller => "reservations", :action => "create"})
+  end
+
   test "index as admin" do
     logged_in_as users(:lou)
     get :index
