@@ -17,7 +17,7 @@ Phase I: Hungry Hawk Restaurant
 [x] use nice name in the from part of email (The Hungry Hawk)
 [x] use dynamic root_url in email confirmation message
 [x] indicate which users are admin users, allow admin privileges
-[ ] eat in is configurable also (2nd lunch is delivery only)
+[x] eat in is configurable also (2nd lunch is delivery only)
 [ ] don't allow login unless email is confirmed
 [ ] show list of people attending restaurant (secure for admin user)
 [ ] when a restaurant is selected, show the description and price, and menu details

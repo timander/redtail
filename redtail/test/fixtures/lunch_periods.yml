@@ -1,20 +1,20 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+first:
   period: 1
   name: 'first'
   begin_end_times: '11:10 - 11:40'
   eat_in_available: true
   to_go_available: false
 
-two:
+second:
   period: 2
   name: 'second'
   begin_end_times: '12:00 - 12:30'
   eat_in_available: false
   to_go_available: true
  
-three:
+third:
   period: 3
   name: 'third'
   begin_end_times: '12:30 - 1:00'
