@@ -29,7 +29,9 @@ class ApplicationController < ActionController::Base
   end
 
   def admin?
-    session_user.admin?
+    unless session_user.admin?
+      render :text => "NO ACCESS", :status => '401 Unauthorized'
+    end
   end
 
   def session_user

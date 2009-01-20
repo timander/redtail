@@ -36,3 +36,11 @@ class Test::Unit::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+class ActionController::TestCase
+
+  def logged_in_as(user)
+    @request.session[:user_id] = user.id
+  end
+  
+end

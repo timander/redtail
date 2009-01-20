@@ -4,5 +4,15 @@ ron:
   first_name: Ron
   last_name: Jon
   email_confirmed: true
+  admin: false
+  created_at: <%= 3.days.ago.strftime("YYYY-MM-DD") %>
+  updated_at: <%= 3.days.ago.strftime("YYYY-MM-DD") %>
+lou:
+  email: lou@lou.com
+  hashed_password: 5eb942810a75ebc850972a89285d570d484c89c4 # my_password
+  first_name: Lou
+  last_name: Ferigno
+  email_confirmed: true
+  admin: true
   created_at: <%= 3.days.ago.strftime("YYYY-MM-DD") %>
   updated_at: <%= 3.days.ago.strftime("YYYY-MM-DD") %>

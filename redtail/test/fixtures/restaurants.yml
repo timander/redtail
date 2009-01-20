@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+greek:
   name: Greek Lunch
   date: 2009-02-07
   price: 6.00
   open: true
   description: Please join us for Roasted Red Pepper Chicken Pesto Pita Pockets.
 
-two:
+italian:
   name: Italian Lunch
   date: 2009-03-08
   price: 6.0

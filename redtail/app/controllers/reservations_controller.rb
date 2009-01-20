@@ -1,20 +1,13 @@
 class ReservationsController < ApplicationController
   
-  before_filter :admin?, :except => new
+  before_filter :admin?, :only => :index
     
   def index
     @reservations = Reservation.find(:all)
   end
   
-  # GET /reservations/new
-  # GET /reservations/new.xml
   def new
     @reservation = Reservation.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @reservation }
-    end
   end
 
   def create

@@ -1,8 +1,62 @@
 require 'test_helper'
 
 class ReservationsControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+  fixtures :reservations, :users, :lunch_periods
+
+  test "index as admin" do
+    logged_in_as users(:lou)
+    get :index
+    assert_response :success
+    assert_equal Reservation.find(:all), assigns["reservations"]
+  end
+
+  test "index as non logged-in user" do
+    get :index
+    assert_response :redirect
+    assert_redirected_to login_url
+  end
+
+  test "index as normal user" do
+    logged_in_as users(:ron)
+    get :index
+    assert_response 401
+  end
+
+  test "new" do
+    logged_in_as users(:ron)
+    get :new
+    assert_not_nil assigns["reservation"]
+    assert assigns["reservation"].instance_of?(Reservation)
+  end
+
+  test "create" do
+    logged_in_as users(:ron)
+
+    assert_difference('Reservation.count') do
+      post :create, {:reservation => { }, :restaurant => { :id => restaurants(:italian).id }, :lunch_period => { :id => lunch_periods(:one).id} }
+    end
+    
+    assert_response :redirect
+    new_reservation = Reservation.last
+    assert_redirected_to reservation_url(new_reservation)
+  end
+
+  test "create with invalid reservation" do
+    logged_in_as users(:ron)
+    post :create, {:reservation => { }, :restaurant => { :id => restaurants(:italian).id }, :lunch_period => { :id => nil } }
+    assert_response :success
+    assert_template "new"
+  end
+
+  test "show" do
+    logged_in_as users(:ron)
+
+    reservation = Reservation.create(:user => users(:ron),
+                                     :restaurant => restaurants(:italian),
+                                     :lunch_period => lunch_periods(:one))
+    
+    get :show, :id => reservation.id
+    assert_response :success
+    assert_equal reservation, assigns["reservation"]
   end
 end
