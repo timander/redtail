@@ -6,7 +6,8 @@ class ReservationTest < ActiveSupport::TestCase
     @options = {
       :user => User.new,
       :restaurant => Restaurant.new,
-      :lunch_period => LunchPeriod.new
+      :lunch_period => LunchPeriod.new(:to_go_available => true),
+      :take_out => 'yes'
     }
   end
 
@@ -15,6 +16,18 @@ class ReservationTest < ActiveSupport::TestCase
     reservation = Reservation.create(@options)
     assert !reservation.valid?
     assert reservation.errors.on(:user)
+  end
+  
+  test "requires take out selection" do
+    @options.delete(:take_out)
+    reservation = Reservation.create(@options)
+    assert !reservation.valid?
+    assert reservation.errors.on(:take_out)
+  end
+  
+  test "valid restaurant" do
+    reservation = Reservation.create(@options)
+    assert reservation.valid?
   end
   
   test "requires restaurant"  do
