@@ -21,7 +21,7 @@ class WelcomeControllerTest < ActionController::TestCase
         
     assert_response :success
     
-    assert_equal(nil, assigns["user"])
+    assert_nil assigns["user"]
     assert_equal(lunch_periods(:first), assigns["first_lunch"])
     assert_equal(lunch_periods(:second), assigns["second_lunch"])
     assert_equal(restaurants(:greek), assigns["next_restaurant"])
