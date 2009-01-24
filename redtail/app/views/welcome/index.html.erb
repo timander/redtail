@@ -14,14 +14,15 @@
   customer service, financial management, 
   and sanitation procedures. 
 </p>
+
+<% if @next_restaurant %>
+
 <p>
   The cost of the meal 
   is <%= number_to_currency @next_restaurant.price %> 
   to be paid to the host when you arrive.
 </p>
-
 <hr/>
-
 <h3>The next restaurant will be <%= @next_restaurant.date_formatted %></h3>
 
 <% if !@next_restaurant.description.blank? %>
@@ -30,7 +31,7 @@
 </p>
 <% end %>
 <hr/>
-
 <p style='font-style: italic; text-align: center'>
   <%= link_to 'Make a reservation', new_reservation_url %>
 </p>
+<% end %>
