@@ -22,16 +22,16 @@ Phase I: Hungry Hawk Restaurant
 [x] cut take out over to a checkbox instead of a radio button
 [x] display On The Menu: on the welcome page, if there is a description
 [x] display the price for the next restaurant
+[x] add number of guests to registration (with guest names)
+[x] display the cost of the restaurant on the welcome page
 [ ] don't allow login unless email is confirmed
 [ ] when a restaurant is selected, show the description and price, and menu details
 [ ] display only future restaurants on /reservations
 [ ] add other choices (dressing, drink) to reservation
 [ ] use the lunch period the user last selected as the default
-[ ] display location of restaurant on the welcome page
-[ ] display the cost of the restaurant on the welcome page
+[ ] display (dynamic) location of restaurant on the welcome page
 [ ] don't allow a reservation for a restaurant after the cut-off date
 [ ] to go option should be enabled/disabled based on lunch_period
-[ ] add number of guests to registration (with guest names)
 [ ] require drink, dressing if take out is selected
 [ ] admin user should be able to put special messages on the welcome page
 [ ] admin user should be able to view a list of restaurant attendees
