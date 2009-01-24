@@ -1,24 +1,27 @@
+<script type="text/javascript" language="JavaScript">
+function showRestaurantDesc() {
+//hmmm...?
+}
+</script>
+
 <fieldset>
 <legend>New Reservation</legend>
 
+	<%= error_messages_for :reservation %>
 
 <% form_for(@reservation) do |f| %>
-  <p class="error">
-    <%= f.error_messages %>
-  </p>
 
   <p>
     <%= f.label :restaurant_id %>
-    <%= collection_select("reservation", "restaurant_id", Restaurant.find(:all), "id", "name_on_date", options ={:include_blank => true} ) %>
+    <%= collection_select("reservation", "restaurant_id", Restaurant.find(:all), "id", "name_on_date", options ={:include_blank => true}, html_options = {:onchange => "showRestaurantDesc()"} ) %>
   </p>
   <p>
     <%= f.label :lunch_period_id %>
     <%= collection_select("reservation", "lunch_period_id", LunchPeriod.find(:all, :order => :period), "id", "to_s", options ={:include_blank => true} ) %>
   </p>
   <p>
-    <%= f.label :take_out %>
-    Yes <%= f.radio_button :take_out, :yes %>
-    No <%= f.radio_button :take_out, :no %>
+	<%= f.label :to_go %>
+	<%= f.check_box :to_go %>
   </p>
   <p>
     <%= f.label :special_request %>

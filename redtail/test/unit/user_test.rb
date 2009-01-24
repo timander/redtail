@@ -75,6 +75,14 @@ class UserTest < ActiveSupport::TestCase
     assert_nil saved_user.password
     assert_nil saved_user.password_confirmation
   end
+  
+  test "password minimum length" do
+    @options[:password] = "abc"
+    @options[:password_confirmation] = "abc"
+    user = User.create(@options)
+    assert !user.valid?
+    assert "password minimum length is 4", user.errors.on(:password)    
+  end
 
   test "cleans email" do
     @options[:email] = "TEST @ TEst. COM"
