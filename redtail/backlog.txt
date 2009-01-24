@@ -19,13 +19,13 @@ Phase I: Hungry Hawk Restaurant
 [x] indicate which users are admin users, allow admin privileges
 [x] eat in is configurable also (2nd lunch is delivery only)
 [x] show list of people attending restaurant (secure for admin user)
-[ ] cut take out over to a checkbox instead of a radio button
+[x] cut take out over to a checkbox instead of a radio button
+[ ] display On The Menu: on the welcome page
 [ ] don't allow login unless email is confirmed
 [ ] when a restaurant is selected, show the description and price, and menu details
 [ ] display only future restaurants on /reservations
 [ ] add other choices (dressing, drink) to reservation
 [ ] use the lunch period the user last selected as the default
-[ ] display On The Menu: on the welcome page
 [ ] display location of restaurant on the welcome page
 [ ] display the cost of the restaurant on the welcome page
 [ ] don't allow a reservation for a restaurant after the cut-off date
