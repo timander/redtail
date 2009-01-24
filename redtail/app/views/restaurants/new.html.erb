@@ -1,0 +1,33 @@
+<fieldset>
+<legend>New Restaurant</legend>
+
+<% form_for(@restaurant) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :price %>
+    <%= f.text_field :price, :size => '4' %>
+  </p>
+  <p>
+    <%= f.label :open %>
+    <%= f.check_box :open %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_area :description, :size => '28x2' %>
+  </p>
+  <p style='text-align:center'>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+
+</fieldset>
