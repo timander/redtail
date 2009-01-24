@@ -4,9 +4,9 @@
 <h3>Thank you for your reservation, <%= @reservation.user.first_name%>.<h3>
 
 <p>
-	We'll see you for the <%= @reservation.restaurant.name %> 
-    on <%= nice_date @reservation.restaurant.date %>
-	for <%= @reservation.lunch_period.name%> lunch (<%= @reservation.lunch_period.begin_end_times%>).
+	We will see you on <%= @reservation.restaurant.date_formatted %><br/>
+	for <%= @reservation.lunch_period.name%> 
+	lunch (<%= @reservation.lunch_period.begin_end_times%>).
 </p>
 
 </fieldset>

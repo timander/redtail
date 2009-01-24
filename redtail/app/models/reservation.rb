@@ -9,7 +9,7 @@ class Reservation < ActiveRecord::Base
 
   def validate_on_create
     if lunch_period
-      if (:to_go)
+      if (to_go)
         errors.add(:to_go, "is not available for #{lunch_period.name} lunch.") unless lunch_period.to_go_available
       else
         errors.add(:to_go, "is the only option for #{lunch_period.name}.") unless lunch_period.eat_in_available

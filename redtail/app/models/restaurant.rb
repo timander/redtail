@@ -8,5 +8,9 @@ class Restaurant < ActiveRecord::Base
   def self.find_next
     self.find(:first, :conditions => ["date > ?", Date.today], :order => "date asc") 
   end
-  
+
+  # Produces -> Thursday May 25, 2006
+  def date_formatted
+    date.strftime("%A %B %d, %Y")
+  end
 end

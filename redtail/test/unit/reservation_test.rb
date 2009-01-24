@@ -6,7 +6,8 @@ class ReservationTest < ActiveSupport::TestCase
     @options = {
       :user => User.new,
       :restaurant => Restaurant.new,
-      :lunch_period => LunchPeriod.new(:to_go_available => true)
+      :lunch_period => LunchPeriod.new(:to_go_available => true),
+      :to_go => 1
     }
   end
 
@@ -39,7 +40,8 @@ class ReservationTest < ActiveSupport::TestCase
   test "to go not available for lunch period"  do
     reservation = Reservation.create(:user => User.new,
                                      :restaurant => Restaurant.new,
-                                     :lunch_period => lunch_periods(:first))
+                                     :lunch_period => lunch_periods(:first),
+                                     :to_go => 1)
     assert !reservation.valid?
     assert reservation.errors.on(:to_go)
   end

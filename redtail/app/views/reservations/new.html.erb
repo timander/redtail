@@ -7,13 +7,13 @@ function showRestaurantDesc() {
 <fieldset>
 <legend>New Reservation</legend>
 
-	<%= error_messages_for :reservation %>
+<%= error_messages_for :reservation %>
 
 <% form_for(@reservation) do |f| %>
 
   <p>
     <%= f.label :restaurant_id %>
-    <%= collection_select("reservation", "restaurant_id", Restaurant.find(:all), "id", "name_on_date", options ={:include_blank => true}, html_options = {:onchange => "showRestaurantDesc()"} ) %>
+    <%= collection_select("reservation", "restaurant_id", Restaurant.find(:all), "id", "date_formatted", options ={:include_blank => true}, html_options = {:onchange => "showRestaurantDesc()"} ) %>
   </p>
   <p>
     <%= f.label :lunch_period_id %>
@@ -24,10 +24,18 @@ function showRestaurantDesc() {
 	<%= f.check_box :to_go %>
   </p>
   <p>
-    <%= f.label :special_request %>
-    <%= f.text_area :special_request, :size => '32x3'%>
+    <%= f.label :number_of_guests %>
+    <%= f.text_field  :number_of_guests, :size => '2'%> (not including yourself)
   </p>
   <p>
+    <%= f.label :names_of_guests %>
+    <%= f.text_area :names_of_guests, :size => '26x2'%>
+  </p>
+  <p>
+    <%= f.label :special_request %>
+    <%= f.text_area :special_request, :size => '26x2'%>
+  </p>
+  <p style='text-align: center'>
     <%= f.submit "Make Reservation" %>
   </p>
 <% end %>

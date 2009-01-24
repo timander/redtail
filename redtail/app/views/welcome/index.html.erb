@@ -7,16 +7,6 @@
   you can pick up your lunch to go in our kitchen.
 </p>
 
-<hr/>
-
-<h3>The next lunch at the Hungry Hawk Restaurant</h3>
-
-<p style='font-style: italic; text-align: center'>
-  <%= @next_restaurant.name %> on <%= nice_date @next_restaurant.date %>
-</p>
-
-<hr/>
-
 <p>
   This meal will help the students gain valuable, 
   real-world experience in many aspects of working 
@@ -25,5 +15,22 @@
   and sanitation procedures. 
 </p>
 <p>
-  The cost of the meal is $6 to be paid to the host when you arrive.    
+  The cost of the meal 
+  is <%= number_to_currency @next_restaurant.price %> 
+  to be paid to the host when you arrive.
+</p>
+
+<hr/>
+
+<h3>The next restaurant will be <%= @next_restaurant.date_formatted %></h3>
+
+<% if !@next_restaurant.description.blank? %>
+<p style='font-style: italic; text-align: center'>
+	On the menu:<br/> <%= @next_restaurant.description %> 
+</p>
+<% end %>
+<hr/>
+
+<p style='font-style: italic; text-align: center'>
+  <%= link_to 'Make a reservation', new_reservation_url %>
 </p>

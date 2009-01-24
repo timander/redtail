@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20090113051314) do
     t.integer  "restaurant_id"
     t.integer  "lunch_period_id"
     t.boolean  "to_go"
+    t.integer  "number_of_guests"
+    t.string   "names_of_guests"
     t.string   "special_request"
     t.datetime "created_at"
     t.datetime "updated_at"

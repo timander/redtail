@@ -18,7 +18,7 @@ label {
   display: block
 }
 
-input {
+input, textarea, select {
   margin-left: 0.5em;
   border-color: black;
   border-width: thin;
