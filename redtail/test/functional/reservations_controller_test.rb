@@ -61,9 +61,8 @@ class ReservationsControllerTest < ActionController::TestCase
 
     reservation = Reservation.create(:user => users(:ron),
                                      :restaurant => restaurants(:italian),
-                                     :lunch_period => lunch_periods(:second), 
-                                     :to_go => 1, 
-                                     :dressing => dressings(:ranch))
+                                     :lunch_period => lunch_periods(:first), 
+                                     :to_go => 0)
     
     get :show, :id => reservation.id
     assert_response :success

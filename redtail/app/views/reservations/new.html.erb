@@ -32,6 +32,10 @@ function showRestaurantDesc() {
 	<%= f.check_box :to_go %>
   </p>
   <p>
+    <%= f.label :drink_id %>
+    <%= collection_select("drink", "drink_id", Drink.find(:all), "id", "name", options ={:include_blank => true} ) %>
+  </p>
+  <p>
     <%= f.label :dressing_id %>
     <%= collection_select("dressing", "dressing_id", Dressing.find(:all), "id", "name", options ={:include_blank => true} ) %>
   </p>
