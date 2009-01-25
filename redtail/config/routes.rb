@@ -1,19 +1,17 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :dressings
 
-  map.resources :drinks
-
-  
   map.root :controller => "welcome"
-
+    
   map.resources :reservations
   map.resources :restaurants
-
+  map.resources :dressings
+  map.resources :drinks
+  map.resources :users
+  
   map.connect 'confirm_email/:hash', :controller => "user", :action => "confirm_email"
 
   map.logout 'logout', :controller => "user", :action => "logout"
   map.login 'login', :controller => "user", :action => "login"
-  map.admin 'admin', :controller => "welcome", :action => "admin"
   map.register 'register', :controller => 'user', :action => 'register'
 
   # 
