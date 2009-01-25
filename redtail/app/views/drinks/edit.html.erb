@@ -1,0 +1,19 @@
+<fieldset>
+<legend>Editing dressing</legend>
+
+<% form_for(@drink) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @drink %> |
+<%= link_to 'Back', drinks_path %>
+
+</fieldset>

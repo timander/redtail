@@ -1,0 +1,18 @@
+<fieldset>
+<legend>New dressing</legend>
+
+<% form_for(@dressing) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', dressings_path %>
+
+</fieldset>

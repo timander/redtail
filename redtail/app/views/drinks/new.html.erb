@@ -1,0 +1,18 @@
+<fieldset>
+<legend>New drink</legend>
+
+<% form_for(@drink) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', drinks_path %>
+
+</fieldset>

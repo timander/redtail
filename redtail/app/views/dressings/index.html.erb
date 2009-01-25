@@ -1,0 +1,20 @@
+<h1>Listing dressings</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for dressing in @dressings %>
+  <tr>
+    <td><%=h dressing.name %></td>
+    <td><%= link_to 'Show', dressing %></td>
+    <td><%= link_to 'Edit', edit_dressing_path(dressing) %></td>
+    <td><%= link_to 'Destroy', dressing, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dressing', new_dressing_path %>

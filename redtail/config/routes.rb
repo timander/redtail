@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :dressings
+
+  map.resources :drinks
+
   
   map.root :controller => "welcome"
 
@@ -9,6 +13,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.logout 'logout', :controller => "user", :action => "logout"
   map.login 'login', :controller => "user", :action => "login"
+  map.admin 'admin', :controller => "welcome", :action => "admin"
   map.register 'register', :controller => 'user', :action => 'register'
 
   # 
