@@ -24,23 +24,25 @@ Phase I: Hungry Hawk Restaurant
 [x] display the price for the next restaurant
 [x] add number of guests to registration (with guest names)
 [x] display the cost of the restaurant on the welcome page
+[x] show email address of logged in user
+[x] admin user should be able to create new restaurants
+[x] admin user should be able to view a list of restaurant attendees
+[x] regular user must confirm registration by verifying email received
+[ ] show lunch description after a lunch drop down selection
+[ ] format layout so title is even with username
+[ ] to go option should be enabled/disabled based on lunch_period
+[ ] add other choices (dressing, drink) to reservation
+[ ] require drink, dressing if take out is selected
 [ ] don't allow login unless email is confirmed
 [ ] when a restaurant is selected, show the description and price, and menu details
 [ ] display only future restaurants on /reservations
-[ ] add other choices (dressing, drink) to reservation
 [ ] use the lunch period the user last selected as the default
 [ ] display (dynamic) location of restaurant on the welcome page
 [ ] don't allow a reservation for a restaurant after the cut-off date
-[ ] to go option should be enabled/disabled based on lunch_period
-[ ] require drink, dressing if take out is selected
 [ ] admin user should be able to put special messages on the welcome page
-[ ] admin user should be able to view a list of restaurant attendees
 [ ] admin user should be able to view a grocery list of ingredients for a restaurant
-[ ] admin user should be able to create new restaurants
-[ ] regular user must confirm registration by verifying email received
 [ ] admin user should be able to send mass email reminder to everyone who has registered
 [ ] allow user to change their email address and other personal info
-[ ] show email address of logged in user
 [ ] admin user should be able to add a reservation for a regular user
 
 -------------------------------
