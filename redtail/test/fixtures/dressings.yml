@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+ranch:
+  name: Ranch
+
+italian:
+  name: Italian
+
+french:
+  name: French

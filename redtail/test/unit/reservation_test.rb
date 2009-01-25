@@ -7,7 +7,8 @@ class ReservationTest < ActiveSupport::TestCase
       :user => User.new,
       :restaurant => Restaurant.new,
       :lunch_period => LunchPeriod.new(:to_go_available => true),
-      :to_go => 1
+      :to_go => 1,
+      :dressing => Dressing.new
     }
   end
 

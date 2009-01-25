@@ -20,16 +20,20 @@ function showRestaurantDesc() {
     <%= collection_select("reservation", "lunch_period_id", LunchPeriod.find(:all, :order => :period), "id", "to_s", options ={:include_blank => true} ) %>
   </p>
   <p>
-	<%= f.label :to_go %>
-	<%= f.check_box :to_go %>
-  </p>
-  <p>
     <%= f.label :number_of_guests %>
     <%= f.text_field  :number_of_guests, :size => '2'%> (not including yourself)
   </p>
   <p>
     <%= f.label :names_of_guests %>
     <%= f.text_area :names_of_guests, :size => '26x2'%>
+  </p>
+  <p>
+	<%= f.label :to_go %>
+	<%= f.check_box :to_go %>
+  </p>
+  <p>
+    <%= f.label :dressing_id %>
+    <%= collection_select("dressing", "dressing_id", Dressing.find(:all), "id", "name", options ={:include_blank => true} ) %>
   </p>
   <p>
     <%= f.label :special_request %>
