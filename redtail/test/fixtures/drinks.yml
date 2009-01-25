@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+water:
+  name: Water
+
+iced_tea:
+  name: Iced Tea
+
+lemonade:
+  name: Lemonade
