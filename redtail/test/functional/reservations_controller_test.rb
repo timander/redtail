@@ -55,7 +55,7 @@ class ReservationsControllerTest < ActionController::TestCase
     assert_response :success
     assert_template "new"
   end
-
+  
   test "show" do
     logged_in_as users(:ron)
 

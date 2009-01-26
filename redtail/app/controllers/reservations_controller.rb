@@ -14,6 +14,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.create(
                 params[:reservation].merge(:user_id => session[:user_id]))
     if @reservation.valid?
+      MailRobot::deliver_reservation_email(@user, @reservation)
       redirect_to reservation_url(@reservation)
     else
       render :action => "new"

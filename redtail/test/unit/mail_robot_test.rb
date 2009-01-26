@@ -24,4 +24,26 @@ EOB
 
     assert_equal @expected.encoded, MailRobot.create_confirmation_email(user, hash, url).encoded
   end
+
+    test "create reservation email" do
+      user = users(:ron)
+      reservation = Reservation.create(:user => users(:ron),
+                                       :restaurant => restaurants(:italian),
+                                       :lunch_period => lunch_periods(:first))
+
+      @expected.from = "The Hungry Hawk <admin@hungryhawk.org>"
+      @expected.to = "ron@ron.com"
+      @expected.subject = "Hungry Hawk Restaurant Reservation"
+      @expected.body = <<EOB
+ron@ron.com,
+
+Thank you for your reservation.  We will see you on Sunday March 08, 2009.
+
+- The Hungry Hawk
+EOB
+
+      assert_equal @expected.encoded, MailRobot.create_reservation_email(user, reservation).encoded
+    end
+
+
 end

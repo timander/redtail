@@ -14,4 +14,15 @@ class MailRobot < ActionMailer::Base
 
   end
 
+  def reservation_email(user, reservation)
+
+    from "The Hungry Hawk <admin@hungryhawk.org>"
+    recipients user.email
+    subject "Hungry Hawk Restaurant Reservation"
+    
+    @body["email"] = user.email
+    @body["reservation_date"] = reservation.restaurant.date_formatted
+
+  end
+  
 end
