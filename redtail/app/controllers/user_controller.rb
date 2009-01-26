@@ -12,7 +12,11 @@ class UserController < ApplicationController
         if session[:requested_url]
           redirect_to session[:requested_url]
         else
-          redirect_to new_reservation_url
+          if @user.admin?
+            redirect_to admin_url
+          else
+            redirect_to new_reservation_url
+          end
         end
       else
         @auth_error = "Invalid login/password"

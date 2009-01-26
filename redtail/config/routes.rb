@@ -8,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :drinks
   map.resources :users
   
+  map.admin 'admin', :controller => 'admin', :action => 'index'
+  
   map.connect 'confirm_email/:hash', :controller => "user", :action => "confirm_email"
 
   map.logout 'logout', :controller => "user", :action => "logout"

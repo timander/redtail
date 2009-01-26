@@ -27,6 +27,14 @@ class UserControllerTest < ActionController::TestCase
     assert_redirected_to new_reservation_url
   end
   
+  def test_post_login_admin
+    post :login, { "email" => "lou@lou.com", "password" => "my_password" }
+
+    assert_equal users(:lou).id, @request.session[:user_id]
+    assert_response :redirect
+    assert_redirected_to admin_url
+  end
+
   def test_post_login_good_redirected_back_to_url
     @request.session[:requested_url] = { :controller => 'restuarants'}
     
