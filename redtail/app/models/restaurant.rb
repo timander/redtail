@@ -13,4 +13,5 @@ class Restaurant < ActiveRecord::Base
   def date_formatted
     date.strftime("%A %B %d, %Y")
   end
+    
 end

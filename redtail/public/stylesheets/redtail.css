@@ -9,10 +9,22 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+th {
+  font-size: 10;
+  border-color: black;
+  border-width: thin;
+  border-style: ridge;
+  font-weight: normal;
+  text-align: left;
+  white-space: nowrap;
+  color: #ffffff;
+  background-color: #777777;
+}
+
 label {
   width: 8em;
   float: left;
-  white-space:nowrap;
+  white-space: nowrap;
   text-align: right;
   margin-right: 0.5em;
   display: block

@@ -1,22 +1,31 @@
 <fieldset>
 <legend>Reservations</legend>
 
-<table>
+<hr/>
+  <% for restaurant in Restaurant.find(:all) %>
+<table border='0' width='100%'>
   <tr>
-    <th>Restaurant</th>
-    <th>Date</th>
+	<td colspan='6'>
+		<h3><%= restaurant.name %> on <%= restaurant.date_formatted %></h3>
+	</td>
+  </tr>
+  <tr>
     <th>Name</th>
+    <th>Guests</th>
+    <th>Guest Names</th>
     <th>Special Request</th>
   </tr>
-		
-<% for reservation in @reservations %>
+
+<% for reservation in Reservation.find(:all, :conditions => ["restaurant_id = ? and to_go = ?", restaurant.id, 0]) %>
   <tr>
-    <td><%=h reservation.restaurant.name %></td>
-    <td><%=h reservation.restaurant.date %></td>
     <td><%=h reservation.user.name %></td>
+    <td><%=h reservation.number_of_guests %></td>
+    <td><%=h reservation.names_of_guests %></td>
     <td><%=h reservation.special_request %></td>
   </tr>
 <% end %>
 
 </table>
+<hr/>
+  <% end %>
 </fieldset>
