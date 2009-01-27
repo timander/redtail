@@ -28,26 +28,30 @@ Phase I: Hungry Hawk Restaurant
 [x] admin user should be able to create new restaurants
 [x] admin user should be able to view a list of restaurant attendees
 [x] regular user must confirm registration by verifying email received
-[ ] display admin link for admin users
-[ ] show lunch description after a lunch drop down selection
-[ ] to go option should be enabled/disabled based on lunch_period
-[ ] add other choices (dressing, drink) to reservation
-[ ] require drink, dressing if take out is selected
-[ ] don't allow login unless email is confirmed
+[x] display admin link for admin users
+[x] add other choices (dressing, drink) to reservation
+[x] require drink, dressing if take out is selected
+[ ] make the reservations admin screen nicer, break down by lunch period & to go options
+[ ] on reservations admin screen for to go lunches, show drink and dressing selections
 [ ] when a restaurant is selected, show the description and price, and menu details
+[ ] to go option should be enabled/disabled based on lunch_period
+[ ] selecting to go should show/hide the drink/dressing choices
+[ ] don't allow login unless email is confirmed
 [ ] display only future restaurants that are open on /reservations
-[ ] use the lunch period the user last selected as that user's default preference
-[ ] display (dynamic) location of restaurant on the welcome page
 [ ] don't allow a reservation for a restaurant after the cut-off date (that is not open)
-[ ] admin user should be able to put special messages on the welcome page
-[ ] admin user should be able to view a grocery list of ingredients for a restaurant
-[ ] admin user should be able to send mass email reminder to everyone who has registered
-[ ] allow user to change their email address and other personal info
 [ ] admin user should be able to add a reservation for a regular user
+[ ] admin user should be able to print a reservation list for a given lunch
+[ ] admin user should be able to print a to go list for a given lunch
+[ ] admin user should be able to send mass email reminder to everyone who has registered
+[ ] use the lunch period the user last selected as that user's default preference
+[ ] allow user to change their email address and other personal info
+[ ] admin user should be able to put special messages on the welcome page
+[ ] display (dynamic) location of restaurant on the welcome page
 
 -------------------------------
 Phase II: Hungry Hawk @ Home
 -------------------------------
+[ ] admin user should be able to view a grocery list of ingredients for a restaurant
 [ ] admin user should be able to create new take home order opportunities
 [ ] admin user should be able to print a grocery list for an event
 [ ] regular user should be able to place orders for take home
