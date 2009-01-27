@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 class ReservationTest < ActiveSupport::TestCase
 
   def setup
-    @options = {
+    @to_go_options = {
       :user => User.new,
       :restaurant => Restaurant.new,
       :lunch_period => LunchPeriod.new(:to_go_available => true),
@@ -14,27 +14,27 @@ class ReservationTest < ActiveSupport::TestCase
   end
 
   test "requires user"  do
-    @options.delete(:user)
-    reservation = Reservation.create(@options)
+    @to_go_options.delete(:user)
+    reservation = Reservation.create(@to_go_options)
     assert !reservation.valid?
     assert reservation.errors.on(:user)
   end
     
   test "valid restaurant" do
-    reservation = Reservation.create(@options)
+    reservation = Reservation.create(@to_go_options)
     assert reservation.valid?
   end
   
   test "requires restaurant"  do
-    @options.delete(:restaurant)
-    reservation = Reservation.create(@options)
+    @to_go_options.delete(:restaurant)
+    reservation = Reservation.create(@to_go_options)
     assert !reservation.valid?
     assert reservation.errors.on(:restaurant)
   end
   
   test "requires lunch period"  do
-    @options.delete(:lunch_period)
-    reservation = Reservation.create(@options)
+    @to_go_options.delete(:lunch_period)
+    reservation = Reservation.create(@to_go_options)
     assert !reservation.valid?
     assert reservation.errors.on(:lunch_period)
   end
@@ -48,9 +48,28 @@ class ReservationTest < ActiveSupport::TestCase
     assert reservation.errors.on(:to_go)
   end
 
-  
-  def test_save_validate_user
-    reservation = Reservation.new(:restaurant => restaurants(:greek), :lunch_period => lunch_periods(:first))
+  test "to go also requires dressing"  do
+    @to_go_options.delete(:dressing)
+    reservation = Reservation.create(@to_go_options)
+    assert !reservation.valid?
+    assert reservation.errors.on(:dressing)
+  end
+
+  test "to go also requires drink"  do
+    @to_go_options.delete(:drink)
+    reservation = Reservation.create(@to_go_options)
+    assert !reservation.valid?
+    assert reservation.errors.on(:drink)
+  end
+
+  test "to go valid"  do
+    reservation = Reservation.create(@to_go_options)
+    assert reservation.valid?
+  end
+
+  test "validate user on save" do
+    @to_go_options.delete(:user)
+    reservation = Reservation.create(@to_go_options)
     assert !reservation.save, "Saved reservation without user"
   end
   
