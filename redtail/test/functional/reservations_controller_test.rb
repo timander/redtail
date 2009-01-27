@@ -37,7 +37,7 @@ class ReservationsControllerTest < ActionController::TestCase
     assert assigns["reservation"].instance_of?(Reservation)
   end
 
-  test "create" do
+  test "create eat in" do
     logged_in_as users(:ron)
 
     assert_difference('Reservation.count') do
@@ -48,6 +48,25 @@ class ReservationsControllerTest < ActionController::TestCase
     new_reservation = Reservation.last
     assert_redirected_to reservation_url(new_reservation)
   end
+
+  test "create to go" do
+    logged_in_as users(:ron)
+
+    assert_difference('Reservation.count') do
+      post :create, {:reservation => {
+                                      :restaurant_id => restaurants(:italian).id, 
+                                      :lunch_period_id => lunch_periods(:second).id, 
+                                      :to_go => 1, 
+                                      :drink_id => drinks(:lemonade).id, 
+                                      :dressing_id => dressings(:ranch).id }
+                                      }
+    end
+    
+    assert_response :redirect
+    new_reservation = Reservation.last
+    assert_redirected_to reservation_url(new_reservation)
+  end
+
 
   test "create with invalid reservation" do
     logged_in_as users(:ron)

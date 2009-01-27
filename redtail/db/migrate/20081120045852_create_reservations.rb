@@ -5,9 +5,11 @@ class CreateReservations < ActiveRecord::Migration
       t.integer :restaurant_id
       t.integer :lunch_period_id
       t.boolean :to_go
+      t.integer :drink_id
+      t.integer :dressing_id
+      t.string :special_request
       t.integer :number_of_guests
       t.string :names_of_guests
-      t.string :special_request
       t.timestamps
     end
   end
