@@ -33,11 +33,11 @@ function showRestaurantDesc() {
   </p>
   <p>
     <%= f.label :drink_id %>
-    <%= collection_select("drink", "drink_id", Drink.find(:all), "id", "name", options ={:include_blank => true} ) %>
+    <%= collection_select("reservation", "drink_id", Drink.find(:all), "id", "name", options ={:include_blank => true} ) %>
   </p>
   <p>
     <%= f.label :dressing_id %>
-    <%= collection_select("dressing", "dressing_id", Dressing.find(:all), "id", "name", options ={:include_blank => true} ) %>
+    <%= collection_select("reservation", "dressing_id", Dressing.find(:all), "id", "name", options ={:include_blank => true} ) %>
   </p>
   <p>
     <%= f.label :special_request %>
