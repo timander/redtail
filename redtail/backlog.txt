@@ -32,15 +32,15 @@ Phase I: Hungry Hawk Restaurant
 [x] add other choices (dressing, drink) to reservation
 [x] require drink, dressing if take out is selected
 
-[ ] make (n) options that each have (n) selections available for a restaurant
-	eg: Options 1: Selection 1, Selection 2
+[ ] make (n) options that each have (n) choices available for a restaurant
+	eg: Options 1: Choice 1, Choice 2
 	eg: Drink: Lemonade, Water, Iced Tea (required only for to go)
 	eg: Dressing: Ranch, French, Italian (required only for to go)
 	eg: Soup: Chicken Noodle, Cheeseburger (required for everyone)
 	eg: Pizza: Meat Lovers, Pepperoni, Veggie Lovers (required for everyone)
 	
 [ ] indicate whether a choice for an option is required for to go, for everyone
-[ ] record choice for each selection for each person on a reservation
+[ ] record choice for each option for each person on a reservation
 
 [ ] make the reservations admin screen nicer, break down by lunch period & to go options
 [ ] on reservations admin screen for to go lunches, show drink and dressing selections
