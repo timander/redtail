@@ -33,6 +33,7 @@ Phase I: Hungry Hawk Restaurant
 [x] require drink, dressing if take out is selected
 [ ] make the reservations admin screen nicer, break down by lunch period & to go options
 [ ] on reservations admin screen for to go lunches, show drink and dressing selections
+[ ] only require dressing on to go orders when dressing is available
 [ ] when a restaurant is selected, show the description and price, and menu details
 [ ] to go option should be enabled/disabled based on lunch_period
 [ ] selecting to go should show/hide the drink/dressing choices
