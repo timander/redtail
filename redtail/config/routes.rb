@@ -4,8 +4,6 @@ ActionController::Routing::Routes.draw do |map|
     
   map.resources :reservations
   map.resources :restaurants
-  map.resources :dressings
-  map.resources :drinks
   map.resources :users
   
   map.admin 'admin', :controller => 'admin', :action => 'index'

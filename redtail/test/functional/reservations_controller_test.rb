@@ -56,9 +56,7 @@ class ReservationsControllerTest < ActionController::TestCase
       post :create, {:reservation => {
                                       :restaurant_id => restaurants(:italian).id, 
                                       :lunch_period_id => lunch_periods(:second).id, 
-                                      :to_go => 1, 
-                                      :drink_id => drinks(:lemonade).id, 
-                                      :dressing_id => dressings(:ranch).id }
+                                      :to_go => 1 }
                                       }
     end
     

@@ -7,9 +7,7 @@ class ReservationTest < ActiveSupport::TestCase
       :user => User.new,
       :restaurant => Restaurant.new,
       :lunch_period => LunchPeriod.new(:to_go_available => true),
-      :to_go => 1,
-      :dressing => Dressing.new,
-      :drink => Drink.new
+      :to_go => 1
     }
   end
 
@@ -46,20 +44,6 @@ class ReservationTest < ActiveSupport::TestCase
                                      :to_go => 1)
     assert !reservation.valid?
     assert reservation.errors.on(:to_go)
-  end
-
-  test "to go also requires dressing"  do
-    @to_go_options.delete(:dressing)
-    reservation = Reservation.create(@to_go_options)
-    assert !reservation.valid?
-    assert reservation.errors.on(:dressing)
-  end
-
-  test "to go also requires drink"  do
-    @to_go_options.delete(:drink)
-    reservation = Reservation.create(@to_go_options)
-    assert !reservation.valid?
-    assert reservation.errors.on(:drink)
   end
 
   test "to go valid"  do
