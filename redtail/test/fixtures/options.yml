@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+lemonade:
+  selection: <%= :drink %>
+  name: Lemonade
+
+iced_tea:
+  selection: <%= :drink %>
+  name: Iced Tea
+
+ranch:
+  selection: <%= :dressing %>
+  name: Ranch
+
+french:
+  selection: <%= :dressing %>
+  name: French
+
+chicken_noodle:
+  selection: <%= :soup %>
+  name: Chicken Noodle
+
+cheeseburger:
+  selection: <%= :soup %>
+  name: Cheeseburger Soup

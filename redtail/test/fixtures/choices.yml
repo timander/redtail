@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+drink_choice:
+  restaurant: <%= :italian %>
+  selection_id: <%= :drink.object_id %> # 'selection' seems to be a mysql keyword
+  required: false
+  required_to_go: true
+
+dressing_choice:
+  restaurant: <%= :italian %>
+  selection_id: <%= :dressing.object_id %> # 'selection' seems to be a mysql keyword
+  required: false
+  required_to_go: true
+
+soup_choice:
+  restaurant: <%= :soup_lunch %>
+  selection_id: <%= :soup.object_id %> # 'selection' seems to be a mysql keyword
+  required: true
+  required_to_go: true

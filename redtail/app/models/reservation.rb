@@ -2,6 +2,8 @@ class Reservation < ActiveRecord::Base
   belongs_to :user
   belongs_to :restaurant
   belongs_to :lunch_period
+  has_many :decisions
+  has_many :options, :through => :decisions
   
   validates_presence_of :user, :on => :create, :message => "can't be blank"
   validates_presence_of :restaurant, :on => :create, :message => "can't be blank"

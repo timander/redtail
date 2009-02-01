@@ -1,5 +1,7 @@
 class Restaurant < ActiveRecord::Base
   has_many :reservations
+  has_many :choices
+  has_many :selections, :through => :choices
   
   def name_on_date
     "#{name} on #{date}"

@@ -13,3 +13,10 @@ italian:
   price: 6.0
   open: false
   description: Breadsticks and Lasagna
+
+soup_lunch:
+  name: Soup Lunch
+  date: 2009-06-28
+  price: 6.0
+  open: false
+  description: Chicken Noodle or Cheeseburger Soup

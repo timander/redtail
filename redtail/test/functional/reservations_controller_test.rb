@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ReservationsControllerTest < ActionController::TestCase
 
-  fixtures :reservations, :users, :lunch_periods, :dressings
+  fixtures :reservations, :users, :lunch_periods
 
   test "routes" do
     assert_routing '/reservations', {:controller => "reservations", :action => "index"}

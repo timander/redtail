@@ -9,7 +9,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090113051314) do
+ActiveRecord::Schema.define(:version => 20090201195022) do
+
+  create_table "choices", :force => true do |t|
+    t.integer  "restaurant_id"
+    t.integer  "selection_id"
+    t.boolean  "required"
+    t.boolean  "required_to_go"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "decisions", :force => true do |t|
+    t.integer  "reservation_id"
+    t.integer  "selection_id"
+    t.integer  "option_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "lunch_periods", :force => true do |t|
     t.integer  "period"
@@ -17,6 +34,13 @@ ActiveRecord::Schema.define(:version => 20090113051314) do
     t.string   "begin_end_times"
     t.boolean  "to_go_available"
     t.boolean  "eat_in_available"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "options", :force => true do |t|
+    t.integer  "selection_id"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -39,6 +63,12 @@ ActiveRecord::Schema.define(:version => 20090113051314) do
     t.float    "price"
     t.boolean  "open"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "selections", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
