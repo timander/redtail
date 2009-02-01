@@ -9,6 +9,8 @@ class Reservation < ActiveRecord::Base
   validates_presence_of :restaurant, :on => :create, :message => "can't be blank"
   validates_presence_of :lunch_period, :on => :create, :message => "can't be blank"
   
+  #todo: validate decisions against restaurant.choices (required, required_to_go)
+  
   def validate_on_create
     if lunch_period
       if (to_go)
