@@ -25,6 +25,8 @@ fixtures :restaurants, :reservations, :users, :lunch_periods
   test "should get new" do
     get :new
     assert_response :success
+    assert_not_nil assigns["restaurant"]
+    assert_not_nil assigns["selections"]
   end
 
   test "should create restaurant" do

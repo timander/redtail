@@ -28,6 +28,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/new.xml
   def new
     @restaurant = Restaurant.new
+    @selections = Selection.find(:all)
 
     respond_to do |format|
       format.html # new.html.erb

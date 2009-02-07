@@ -25,7 +25,13 @@
     <%= f.text_area :description, :size => '28x2' %>
   </p>
   <p>
-	todo: add choices (selection, required, required_to_go)
+	<% @selections.each do |selection| %>
+	<%= check_box :required, '1' %>
+	<%= check_box :required_to_go, '1' %>
+	<%= selection.name %>: 
+	<%= selection.options.collect{|o| o.name}.join(', ') %>
+	<br/>
+	<% end %>
   </p>
   <p style='text-align:center'>
     <%= f.submit "Create" %>

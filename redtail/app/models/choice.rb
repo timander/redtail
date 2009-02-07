@@ -2,5 +2,5 @@
 
 class Choice < ActiveRecord::Base
   belongs_to :restaurant
-  has_one :selection
+  belongs_to :selection
 end

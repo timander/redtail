@@ -26,6 +26,9 @@
   </p>
   <p>
 	todo: add choices (selection, required, required_to_go)
+	<div id="choices">
+		<%= render :parital => 'choices/show', :collection => @restaurant.choices %>
+	</div>
   </p>
   <p style='text-align:center'>
     <%= f.submit "Update" %>
