@@ -23,6 +23,16 @@
   <%=h @restaurant.description %>
 </p>
 
+<p>
+  <table>
+    <th>Choices</th>
+      <% @restaurant.choices.each do |choice| %>
+    <tr>
+      <td><%= choice.selection.name %>: <%= choice.selection.options.collect{|o| o.name}.join(', ') %></td>
+    <tr/>
+      <% end %>
+  </table>
+</p>
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>

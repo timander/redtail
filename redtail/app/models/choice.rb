@@ -3,4 +3,6 @@
 class Choice < ActiveRecord::Base
   belongs_to :restaurant
   belongs_to :selection
+  
+  validates_presence_of :selection, :on => :create, :message => "can't be blank"
 end

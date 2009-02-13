@@ -1,7 +1,10 @@
 <fieldset>
 <legend>New Restaurant</legend>
 
+<%= debug params %>
+
 <% form_for(@restaurant) do |f| %>
+
   <%= f.error_messages %>
 
   <p>
@@ -25,13 +28,19 @@
     <%= f.text_area :description, :size => '28x2' %>
   </p>
   <p>
-	<% @selections.each do |selection| %>
-	<%= check_box :required, '1' %>
-	<%= check_box :required_to_go, '1' %>
-	<%= selection.name %>: 
-	<%= selection.options.collect{|o| o.name}.join(', ') %>
-	<br/>
-	<% end %>
+    <table>
+      <th>Required</th>
+      <th>Required To Go</th>
+      <th>Choice</th>
+      <% Selection.all.each do |selection| %>
+      <tr>
+        <td><%= check_box_tag "restaurant[required_selection_ids][]", selection.id %></td>
+        <td><%= check_box_tag "restaurant[required_to_go_selection_ids][]", selection.id %></td>
+	    <td><%= selection.name %>: <%= selection.options.collect{|o| o.name}.join(', ') %></td>
+      <tr/>
+	  <% end %>
+	
+    </table>
   </p>
   <p style='text-align:center'>
     <%= f.submit "Create" %>

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class RestaurantsControllerTest < ActionController::TestCase
 
-fixtures :restaurants, :reservations, :users, :lunch_periods
+  fixtures :restaurants, :reservations, :users, :lunch_periods
 
   def setup
     logged_in_as users(:lou)
@@ -31,7 +31,11 @@ fixtures :restaurants, :reservations, :users, :lunch_periods
 
   test "should create restaurant" do
     assert_difference('Restaurant.count') do
-      post :create, :restaurant => { }
+      post :create, :restaurant => 
+        { :name => "Created Restaurant",
+          :date => Date.today,
+          :price => 6,
+          :description => "Some description"}
     end
 
     assert_redirected_to restaurant_path(assigns(:restaurant))
