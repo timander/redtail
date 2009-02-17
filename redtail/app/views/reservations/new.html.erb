@@ -1,6 +1,6 @@
 <script type="text/javascript" language="JavaScript">
-function showRestaurantDesc() {
-//hmmm...?
+function displayChoicesFor(selectobj) {
+  new Ajax.Updater('restaurant_choices', '/restaurants/' + selectobj.value + '/selections', {asynchronous:true, evalScripts:true, method:'get'}); 
 }
 </script>
 
@@ -15,10 +15,8 @@ function showRestaurantDesc() {
     <%= f.label :restaurant_id %>
     <%= collection_select("reservation", "restaurant_id", Restaurant.all, "id", "date_formatted", 
 			{:include_blank => true}, 
-			{:onchange => 
-				remote_function(:update => "restaurant_choices", :method => :get, :url => {
-					:controller => "selections", :action => "index", :restaurant_id => 1}) + #ideally the restaurant id instead of 
-					"; showRestaurantDesc()"} ) %>
+			{:onchange => "displayChoicesFor(this)"} ) %>
+					
   </p>
   <p>
     <%= f.label :lunch_period_id %>
@@ -37,8 +35,7 @@ function showRestaurantDesc() {
 	<%= f.check_box :to_go %>
   </p>
   <p>
-	<div id="restaurant_choices">
-		todo: for each restaurant.choice, decide		
+	<div id="restaurant_choices">		
 	</div>
   </p>
   <p>

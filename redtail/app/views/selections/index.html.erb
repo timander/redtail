@@ -1,1 +1,8 @@
-<%= debug params %>
+<% Restaurant.find_by_id(params[:restaurant_id]).choices.each do |c| %>
+<p>
+<%= label_tag c.label %>
+<%= collection_select("decisions", "decision_id", c.options, "id", "name", {:include_blank => true}) %>
+</p>
+<% end %>
+
+
