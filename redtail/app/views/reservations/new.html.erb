@@ -1,7 +1,14 @@
 <script type="text/javascript" language="JavaScript">
+
 function displayChoicesFor(selectobj) {
   new Ajax.Updater('restaurant_choices', '/restaurants/' + selectobj.value + '/selections', {asynchronous:true, evalScripts:true, method:'get'}); 
 }
+
+function displayDescriptionFor(selectobj) {
+  //alert(selectobj.value)
+  new Ajax.Updater('restaurant_description', '/restaurants/description/' + selectobj.value, {asynchronous:true, evalScripts:true, method:'get'}); 
+}
+
 </script>
 
 <fieldset>
@@ -15,12 +22,23 @@ function displayChoicesFor(selectobj) {
     <%= f.label :restaurant_id %>
     <%= collection_select("reservation", "restaurant_id", Restaurant.all, "id", "date_formatted", 
 			{:include_blank => true}, 
-			{:onchange => "displayChoicesFor(this)"} ) %>
-					
+			{:onchange => "displayChoicesFor(this); displayDescriptionFor(this)"} ) %>
+  </p>
+  <p>
+	<div id="restaurant_description">
+	</div>
   </p>
   <p>
     <%= f.label :lunch_period_id %>
     <%= collection_select("reservation", "lunch_period_id", LunchPeriod.find(:all, :order => :period), "id", "to_s", options ={:include_blank => true} ) %>
+  </p>
+  <p>
+	<%= f.label :to_go %>
+	<%= f.check_box :to_go %>
+  </p>
+  <p>
+	<div id="restaurant_choices">
+	</div>
   </p>
   <p>
     <%= f.label :number_of_guests %>
@@ -29,14 +47,6 @@ function displayChoicesFor(selectobj) {
   <p>
     <%= f.label :names_of_guests %>
     <%= f.text_area :names_of_guests, :size => '26x2'%>
-  </p>
-  <p>
-	<%= f.label :to_go %>
-	<%= f.check_box :to_go %>
-  </p>
-  <p>
-	<div id="restaurant_choices">		
-	</div>
   </p>
   <p>
     <%= f.label :special_request %>

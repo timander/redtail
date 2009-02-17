@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
   
-  before_filter :admin?
+  before_filter :admin?, :except => :description
     
   # GET /restaurants
   # GET /restaurants.xml
@@ -23,6 +23,12 @@ class RestaurantsController < ApplicationController
       format.xml  { render :xml => @restaurant }
     end
   end
+
+
+  def description
+    render :layout => false
+  end
+
 
   # GET /restaurants/new
   # GET /restaurants/new.xml

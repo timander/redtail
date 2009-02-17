@@ -55,6 +55,12 @@ a:hover {
   background-color:#000;
 }
 
+#restaurant_description {
+  text-align: center;
+  font-style: italic;
+  color: green
+}
+
 #login {
 	text-align: right;
 }

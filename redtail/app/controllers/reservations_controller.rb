@@ -11,6 +11,7 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    #raise params_toyaml
     @reservation = Reservation.create(
                      params[:reservation].merge(:user_id => session[:user_id]))
 
