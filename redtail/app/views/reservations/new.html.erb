@@ -13,7 +13,12 @@ function showRestaurantDesc() {
 
   <p>
     <%= f.label :restaurant_id %>
-    <%= collection_select("reservation", "restaurant_id", Restaurant.find(:all), "id", "date_formatted", options ={:include_blank => true}, html_options = {:onchange => "showRestaurantDesc()"} ) %>
+    <%= collection_select("reservation", "restaurant_id", Restaurant.all, "id", "date_formatted", 
+			{:include_blank => true}, 
+			{:onchange => 
+				remote_function(:update => "restaurant_choices", :method => :get, :url => {
+					:controller => "selections", :action => "index", :restaurant_id => 1}) + #ideally the restaurant id instead of 
+					"; showRestaurantDesc()"} ) %>
   </p>
   <p>
     <%= f.label :lunch_period_id %>
@@ -32,7 +37,9 @@ function showRestaurantDesc() {
 	<%= f.check_box :to_go %>
   </p>
   <p>
-	todo: for each restaurant.choice, decide
+	<div id="restaurant_choices">
+		todo: for each restaurant.choice, decide		
+	</div>
   </p>
   <p>
     <%= f.label :special_request %>

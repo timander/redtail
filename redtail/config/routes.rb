@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "welcome"
     
   map.resources :reservations
-  map.resources :restaurants
+  map.resources :restaurants, :has_many => :selections
   map.resources :users
   
   map.admin 'admin', :controller => 'admin', :action => 'index'
