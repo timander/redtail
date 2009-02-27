@@ -4,7 +4,6 @@ class CreateChoices < ActiveRecord::Migration
       t.integer :restaurant_id
       t.integer :selection_id
       t.boolean :required
-      t.boolean :required_to_go
 
       t.timestamps
     end

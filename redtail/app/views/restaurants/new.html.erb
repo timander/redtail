@@ -30,12 +30,10 @@
   <p>
     <table>
       <th>Required</th>
-      <th>Required To Go</th>
       <th>Choice</th>
       <% Selection.all.each do |selection| %>
       <tr>
         <td><%= check_box_tag "restaurant[required_selection_ids][]", selection.id %></td>
-        <td><%= check_box_tag "restaurant[required_to_go_selection_ids][]", selection.id %></td>
 	    <td><%= selection.name %>: <%= selection.options.collect{|o| o.name}.join(', ') %></td>
       <tr/>
 	  <% end %>
