@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20090201195022) do
     t.integer  "restaurant_id"
     t.integer  "selection_id"
     t.boolean  "required"
-    t.boolean  "required_to_go"
+    t.boolean  "pass"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

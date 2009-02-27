@@ -4,16 +4,16 @@ drink_choice:
   restaurant: <%= :italian %>
   selection: <%= :drink %>
   required: false
-  required_to_go: true
+  pass: true
 
 dressing_choice:
   restaurant: <%= :italian %>
   selection: <%= :dressing %>
   required: false
-  required_to_go: true
+  pass: true
 
 soup_choice:
   restaurant: <%= :soup_lunch %>
   selection: <%= :soup %>
   required: true
-  required_to_go: true
+  pass: true

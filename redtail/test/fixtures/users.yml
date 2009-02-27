@@ -1,6 +1,6 @@
 ron:
   email: ron@ron.com
-  hashed_password: 5eb942810a75ebc850972a89285d570d484c89c4 # my_password
+  hashed_password: 9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684 # pass
   first_name: Ron
   last_name: Jon
   email_confirmed: true
@@ -9,7 +9,7 @@ ron:
   updated_at: <%= 3.days.ago.strftime("YYYY-MM-DD") %>
 lou:
   email: lou@lou.com
-  hashed_password: 5eb942810a75ebc850972a89285d570d484c89c4 # my_password
+  hashed_password: 9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684 # pass
   first_name: Lou
   last_name: Ferigno
   email_confirmed: true
